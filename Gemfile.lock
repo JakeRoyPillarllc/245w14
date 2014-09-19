@@ -2,6 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     bond (0.4.3)
+    bundle (0.0.1)
+      bundler
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -43,6 +45,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundle
   mail
   nokogiri
   pony

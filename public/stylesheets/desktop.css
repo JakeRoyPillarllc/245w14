@@ -1,8 +1,7 @@
 html{
     height:101%;
-    background-image: url("../images/BG_tile2.jpg");
+    background: #ffffff;
     overflow-y: scroll;
-
 }
 
 body{
@@ -44,7 +43,7 @@ body p, ul, table{
 .sidebar{
     margin-top:20%;
     //font-family: ITC Century W01 Book !important; 
-    font-family: 'museo700';
+    font-family: 'EngraversGothicBTW01-Re';
     font-weight: bold;
 
 
@@ -55,7 +54,7 @@ body p, ul, table{
 }
 
 .nav-font{
-    font-family: 'museo300';
+    font-family: Arial;
     //font-weight: bold;
     font-size: 16px;
 }
@@ -106,7 +105,7 @@ table tr td a {
 
 h4{
   //font-family: ITC Century W01 Book !important;  
-  font-family: 'museo700';
+  font-family: 'EngraversGothicBTW01-Re';
   margin-bottom:10px;
   font-size: 14pt;
 }
@@ -157,7 +156,7 @@ table.availabilities_table tr:nth-of-type(even) {
     border-bottom:1px solid black;
     border-top:1px solid black;
     font-size: 12pt !important;
-    font-family: 'museo700';
+    font-family: 'EngraversGothicBTW01-Re';
     //font-family: ITC Century W01 Book !important;
     color:#989484 !important;
      
@@ -166,7 +165,7 @@ table.availabilities_table tr:nth-of-type(even) {
     color:black !important;
 }
 .accordion.modal.map-accordion > section > .title > a:hover {
-    background-color:#efeee9 !important;
+    background-color:#ffffff !important;
 }
 .section-container.accordion.map-accordion > section.active > .title > a{
     color:black !important;
@@ -237,7 +236,7 @@ hr {
 .section-container.accordion > section.active > .title,
 .section-container.accordion > .section.active > .title {
 
-  background: #efeee9;
+  background: #ffffff;
   border:none;
 
 	}
@@ -246,11 +245,11 @@ hr {
 }
 
 .section-container.vertical-tabs{
-  background-color:#efeee9; 
+  background-color:#ffffff;
 }
 
 .everything{
-    background-color:#efeee9; 
+    background-color:#ffffff;
     min-height:100%;
 }
 
@@ -282,7 +281,7 @@ hr {
 .head{
     //padding-top:5px !important;
 	margin-bottom:20px;
-    font-family: 'museo700';
+    font-family: 'EngraversGothicBTW01-Re';
 	//font-family: ITCCenturyW01-BookItali;
     //font-family: Redwood W01 Regular;
 
@@ -347,6 +346,10 @@ section p:not(.title) {
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'EngraversGothicBTW01-Re';
+}
+
 
 /*.orbit-bullets{
         position: absolute;
