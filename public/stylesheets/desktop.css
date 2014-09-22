@@ -56,7 +56,7 @@ body p, ul, table{
 .nav-font{
     font-family: Arial;
     //font-weight: bold;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 table tr td a {
@@ -70,7 +70,7 @@ table tr td a {
 
 
 .sidebar a{
-    color:#989484;
+    color:rgba(111,111,111,1);
     line-height:20px;
 }
 
@@ -104,9 +104,7 @@ table tr td a {
 
 
 h4{
-  //font-family: ITC Century W01 Book !important;  
   font-family: 'EngraversGothicBTW01-Re';
-  margin-bottom:10px;
   font-size: 14pt;
 }
 
@@ -153,8 +151,8 @@ table.availabilities_table tr:nth-of-type(even) {
     padding-bottom:5px !important;
     padding-left:0px;
     padding-right:0px;
-    border-bottom:1px solid black;
-    border-top:1px solid black;
+    border-bottom:1px solid rgba(111,111,111,1);
+    border-top:1px solid rgba(111,111,111,1);
     font-size: 12pt !important;
     font-family: 'EngraversGothicBTW01-Re';
     //font-family: ITC Century W01 Book !important;
@@ -162,7 +160,7 @@ table.availabilities_table tr:nth-of-type(even) {
      
 }
 .accordion.map-accordion > section > .title > a:hover {
-    color:black !important;
+    color:rgba(200, 255, 0, .2) !important;
 }
 .accordion.modal.map-accordion > section > .title > a:hover {
     background-color:#ffffff !important;
@@ -179,10 +177,18 @@ table.availabilities_table tr:nth-of-type(even) {
 }
 
 hr {
-	border: solid #000000;
-	border-width: 1px 0 0;
+     border: solid rgba(111,111,111,1);
+     border-width: 1px 0 0;
+     clear: both;
+     margin: 2px 0;
+     display: block;
+     height: 0;
+ }
+hr.topline {
+    border: solid rgba(111,111,111,1);
+    border-width: 1px 0 0;
     clear: both;
-    margin: 5px 0;
+    margin: 30px 50px;
     display: block;
     height: 0;
 }
@@ -280,12 +286,12 @@ hr {
 
 .head{
     //padding-top:5px !important;
-	margin-bottom:20px;
+    margin-top: 20px;
+	margin-bottom:10px;
     font-family: 'EngraversGothicBTW01-Re';
-	//font-family: ITCCenturyW01-BookItali;
-    //font-family: Redwood W01 Regular;
-
-	font-size: 24pt;
+	font-size: 14pt;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .white-border{
@@ -298,16 +304,11 @@ hr {
 }
 
 section p:not(.title) {
-    margin-top:20px !important;
+    margin-top:10px !important;
 }
 
 .cent.white-border{
     max-width:100% !important;
-    max-height: 475px !important;
-}
-
-.orbit-container .cent.white-border{
-    height: 475px !important;
 }
 
 .orbit-constraint{
