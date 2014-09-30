@@ -6831,3 +6831,16 @@ a.th {
 .orbit-container .orbit-next > span {
      border:none !important;
 }
+.gm-style .gm-style-iw {
+    font-weight: 300;
+    font-size: 13px;
+}
+.gm-style-iw {
+    overflow:visible;
+}
+.gm-style h3 {
+    font-family: 'EngraversGothicBTW01-Re';
+    font-size: 11px;
+    font-weight: 400;
+    text-decoration: none;
+}

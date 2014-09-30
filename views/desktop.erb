@@ -60,24 +60,11 @@
 
       <script>
           var map;
-          var styles = [
-              {"featureType":"water","elementType":"geometry.fill","stylers":[{"invert_lightness":false}]},
-              {"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#f7ffe9"}]},
-              {"featureType":"road","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#efe9ff"}]},
-              {"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#97edf1"},{"weight":0.4}]},
-              {"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#9bff5d"},
-                  {"weight":0.4}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#c14ba3"}]},
-              {"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#8cfdff"},{"saturation":-43},{"lightness":40}]},
-              {"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"off"},{"color":"#bfd2f3"}]},
-              {"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},
-              {"featureType":"transit.station.rail","elementType":"labels.icon","stylers":[{"visibility":"on"},{"color":"#f08080"}]},
-              {"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
-              {"featureType":"administrative","elementType":"all","stylers":[{"visibility":"off"}]},
-              {"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"off"}]}
-          ];
+          var styles = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#193341"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#29768a"},{"lightness":-37}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#3e606f"},{"weight":2},{"gamma":0.84}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#1a3541"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#2c5a71"}]}];
 
           var styledMap = new google.maps.StyledMapType(styles,
                   {name: "Styled Map"});
+
 
           function initialize() {
               var mapOptions = {
@@ -89,22 +76,46 @@
               };
 
 
+
               map = new google.maps.Map(document.getElementById("map_canvas"),
                       mapOptions);
 
 
               var layer = new google.maps.visualization.MapsEngineLayer({
-                  mapId: '08014202610342195205-08551536342581976716',
-                  layerKey: 'layer_00001',
+                  mapId: '08014202610342195205-00161330875310406093',
+                  layerKey:'layer_00001',
                   map: map,
                   clickable: true,
                   suppressInfoWindows: false
               });
+              var mapsEngineLayer2 = new google.maps.visualization.MapsEngineLayer({
+                  mapId: '08014202610342195205-00161330875310406093',
+                  layerKey: 'layer_00002',
+                  map: map,
+                  clickable: true,
+                  suppressInfoWindows: false
+              });
+
+
+              mapsEngineLayer2.setMap(map);
+
               map.mapTypes.set('map_style', styledMap);
               map.setMapTypeId('map_style');
 
           }
+
           google.maps.event.addDomListener(window, 'load', initialize);
+          $("#map_html").show(function () {
+              var center = map.getCenter();
+              google.maps.event.trigger(map, "resize");
+              map.setCenter(center);
+          });
+
+          google.maps.event.addDomListener(window, 'resize', function() {
+              var center = map.getCenter();
+              google.maps.event.trigger(map, "resize");
+              map.setCenter(center);
+          });
 
       </script>
     </head>
@@ -116,10 +127,7 @@
         <hr class="topline">
         <section id='main-content' style="height:100%;">
             <div class="row " style="max-height:100%;background-color:transparent;position:relative;">
-                <div id="copyright">
-                    <hr>Alfa Development © 2013
-                    <g:plusone size="medium"></g:plusone>
-                </div>
+
                 <div class="small-12 columns " style="max-height:100%;">
                      <div class="everything " style="max-height:100%">
                         <div class="row " style="background-color:transparent; max-height:100%;">
@@ -167,10 +175,15 @@
                     </div>
 
                     </div>
-                </div>
+
+            </div>
+
           </div>
         </section>
-
+        <div id="copyright">
+          <hr>Alfa Development © 2013
+          <g:plusone size="medium"></g:plusone>
+        </div>
 
         <div id="building_html" style="display:none;">
 
@@ -499,95 +512,100 @@
         </div>
 
         <div id="map_html" style="display:none;">
-<%#
-  #        <div class="row">
-  #          <div class="large-4 columns">
-  #            <div class="section-container accordion map-accordion" data-section="accordion">
-  #                                    <section>
-  #                                      <p class="title" data-section-title><a class="close-accordion-hack" href="#" style="border-top:0!important;">SHOPPING</a></p>
-  #                                      <div class="content" data-section-content>
-  #                                        <p class="map-list" style="margin-top:0 !important;">
-  #                                          <b>1</b> Apple Store </br>
-  #                                          <b>2</b> Burberry<br/>
-  #                                          <b>3</b> Commes des Garcons<br/>
-  #                                          <b>4</b> Kiehls<br/>
-  #                                          <b>5</b> Marc Jacobs<br/>
-  #                                          <b>6</b> Diane von Furstenberg<br/>
-  #                                          <b>7</b> Theory<br/>
-  #                                          <b>8</b> Jeffrey<br/>
-  #                                          <b>9</b> Alexander McQueen<br/>
-  #                                        </p>
-  #                                      </div>
-  #                                    </section>
-  #                                    <section>
-  #                                      <p class="title" data-section-title><a class="close-accordion-hack" href="#">FOOD & WINE<br/>MARKETS</a></p>
-  #                                      <div class="content" data-section-content>
-  #                                        <p class="map-list" style="margin-top:0 !important;">
-  #                                          <b>10</b> Chelsea Market<br/>
-  #                                          <b>11</b> Associated<br/>
-  #                                          <b>12</b> Union Square Greenmarket<br/>
-  #                                          <b>13</b> Trader Joe's<br/>
-  #                                          <b>14</b> Whole Foods<br/>
-  #                                        </p>
-  #                                      </div>
-  #                                    </section>
-  #                                    <section>
-  #                                      <p class="title" data-section-title><a class="close-accordion-hack" href="#">OUTDOOR/<br/>RECREATIONAL/<br/>WELLNESS</a></p>
-  #                                      <div class="content" data-section-content>
-  #                                        <p class="map-list" style="margin-top:0 !important;">
-  #                                          <b>15</b> Chelsea Piers<br/>
-  #                                          <b>16</b> The Highline<br/>
-  #                                          <b>17</b> Integral Yoga<br/>
-  #                                          <b>18</b> Hudson River Park<br/>
-  #                                          <b>19</b> Bleecker Playground<br/>
-  #                                        </p>
-  #                                      </div>
-  #                                    </section>
-  #                                    <section>
-  #                                      <p class="title" data-section-title><a class="close-accordion-hack" href="#">NIGHTLIFE/HOTELS/<br/>ENTERTAINMENT</a></p>
-  #                                      <div class="content" data-section-content>
-  #                                        <p class="map-list" style="margin-top:0 !important;">
-  #                                          <b>20</b> Gansevoort<br/>
-  #                                          <b>21</b> Maritime<br/>
-  #                                          <b>22</b> SoHo House<br/>
-  #                                          <b>23</b> Norwood Club<br/>
-  #                                          <b>24</b> Highline Ballroom<br/>
-  #                                          <b>25</b> The Standard<br/>
-  #                                          <b>26</b> Joyce Theater<br/>
-  #                                        </p>
-  #                                      </div>
-  #                                    </section>
-  #                                    <section>
-  #                                      <p class="title" data-section-title><a class="close-accordion-hack" href="#" style="border-bottom:2px solid black;">RESTAURANTS</a></p>
-  #                                      <div class="content" data-section-content>
-  #                                        <p class="map-list" style="margin-top:0 !important;">
-  #                                          <b>27</b> Barbuto<br/>
-  #                                          <b>28</b> Del Posto<br/>
-  #                                          <b>29</b> Morimoto<br/>
-  #                                          <b>30</b> Pastis<br/>
-  #                                          <b>31</b> Alison Eighteen<br/>
-  #                                          <b>32</b> Cafe Cluny<br/>
-  #                                          <b>33</b> Corner Bistro<br/>
-  #                                          <b>34</b> Spice Market<br/>
-  #                                          <b>35</b> Crispo<br/>
-  #                                          <b>36</b> The Darby<br/>
-  #                                        </p>
-  #                                      </div>
-  #                                    </section>
-  #            </div>
-  #          </div>
-  # %>
-            <div class="small-12 columns">
 
-            <div id="map_canvas" style="width: auto; height: 480px"></div>
+           <div class="row">
+
+             <div class="large-4 columns">
+               <div class="section-container accordion map-accordion" data-section="accordion">
+                                       <section>
+                                         <p class="title" data-section-title><a class="close-accordion-hack" href="#" style="border-top:0!important;">SHOPPING</a></p>
+                                         <div class="content" data-section-content>
+                                           <p class="map-list" style="margin-top:0 !important;">
+                                             <b>1</b> Apple Store </br>
+                                             <b>2</b> Burberry<br/>
+                                             <b>3</b> Commes des Garcons<br/>
+                                             <b>4</b> Kiehls<br/>
+                                             <b>5</b> Marc Jacobs<br/>
+                                             <b>6</b> Diane von Furstenberg<br/>
+                                             <b>7</b> Theory<br/>
+                                             <b>8</b> Jeffrey<br/>
+                                             <b>9</b> Alexander McQueen<br/>
+                                           </p>
+                                         </div>
+                                       </section>
+                                       <section>
+                                         <p class="title" data-section-title><a class="close-accordion-hack" href="#">FOOD & WINE<br/>MARKETS</a></p>
+                                         <div class="content" data-section-content>
+                                           <p class="map-list" style="margin-top:0 !important;">
+                                             <b>10</b> Chelsea Market<br/>
+                                             <b>11</b> Associated<br/>
+                                             <b>12</b> Union Square Greenmarket<br/>
+                                             <b>13</b> Trader Joe's<br/>
+                                             <b>14</b> Whole Foods<br/>
+                                           </p>
+                                         </div>
+                                       </section>
+                                       <section>
+                                         <p class="title" data-section-title><a class="close-accordion-hack" href="#">OUTDOOR/<br/>RECREATIONAL/<br/>WELLNESS</a></p>
+                                         <div class="content" data-section-content>
+                                           <p class="map-list" style="margin-top:0 !important;">
+                                             <b>15</b> Chelsea Piers<br/>
+                                             <b>16</b> The Highline<br/>
+                                             <b>17</b> Integral Yoga<br/>
+                                             <b>18</b> Hudson River Park<br/>
+                                             <b>19</b> Bleecker Playground<br/>
+                                           </p>
+                                         </div>
+                                       </section>
+                                       <section>
+                                         <p class="title" data-section-title><a class="close-accordion-hack" href="#">NIGHTLIFE/HOTELS/<br/>ENTERTAINMENT</a></p>
+                                         <div class="content" data-section-content>
+                                           <p class="map-list" style="margin-top:0 !important;">
+                                             <b>20</b> Gansevoort<br/>
+                                             <b>21</b> Maritime<br/>
+                                             <b>22</b> SoHo House<br/>
+                                             <b>23</b> Norwood Club<br/>
+                                             <b>24</b> Highline Ballroom<br/>
+                                             <b>25</b> The Standard<br/>
+                                             <b>26</b> Joyce Theater<br/>
+                                           </p>
+                                         </div>
+                                       </section>
+                                       <section>
+                                         <p class="title" data-section-title><a class="close-accordion-hack" href="#" style="border-bottom:1px solid black;">RESTAURANTS</a></p>
+                                         <div class="content" data-section-content>
+                                           <p class="map-list" style="margin-top:0 !important;">
+                                             <b>27</b> Barbuto<br/>
+                                             <b>28</b> Del Posto<br/>
+                                             <b>29</b> Morimoto<br/>
+                                             <b>30</b> Pastis<br/>
+                                             <b>31</b> Alison Eighteen<br/>
+                                             <b>32</b> Cafe Cluny<br/>
+                                             <b>33</b> Corner Bistro<br/>
+                                             <b>34</b> Spice Market<br/>
+                                             <b>35</b> Crispo<br/>
+                                             <b>36</b> The Darby<br/>
+                                           </p>
+                                         </div>
+                                       </section>
+               </div>
+             </div>
+
+
+              <div class="large-8 columns">
+                <a href="images/Map.jpg" data-reveal-id="myModal">
+                  <img class="cent white-border" src="images/Map.jpg" id="map_img" />
+                </a>
+              </div>
+             <div class="small-12 columns" style="padding: 0;">
+               <div class="head">
+                 One Building, Three Neighborhoods <hr>
+               </div>
+             </div>
 
 
             </div>
-            <div class="small-12 columns" style="padding: 0;">
-                <div class="head">
-                  One Building, Three Neighborhoods <hr>
-                </div>
-            </div>
+
           </div>
         </div>
 
@@ -596,7 +614,7 @@
                 <div class="head">
                       Availability <hr/>
                   </div>
-                For availability <a target="_blank" href="http://www.corcoran.com/nyc/NewDevelopments/Display/582"> click here. </a>
+                For availability <a style="color: rgba(0,200,200,1)" target="_blank" href="http://www.corcoran.com/nyc/NewDevelopments/Display/582"> click here. </a>
                 <script>
                     if (window.XMLHttpRequest)
                     {// code for IE7+, Firefox, Chrome, Opera, Safari
