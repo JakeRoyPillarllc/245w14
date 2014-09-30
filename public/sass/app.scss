@@ -58,15 +58,13 @@
 
 
 
-body{
-    background-image: url('../images/BG_tile2.jpg');
-}
+
 
 #main-content{
     .orbit-bullets{
-        position: absolute;
-        right: 10px;
-        top: 18px;
+        position: relative;
+        margin-left:auto;
+        margin-right:auto;
         li{
             border: none;
             width: 24px;
@@ -86,7 +84,7 @@ body{
         background: transparent;
         //top: -76px;
         //padding-top: 76px;
-        margin-bottom: -76px;
+        margin-bottom: 0px;
     }
     .metric{
         font-size: emCalc(18px);
@@ -125,4 +123,7 @@ body{
     #register{
         
     }
+}
+.orbit-slides-container{
+  margin-bottom: 0px;
 }

@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <meta name="description" content="Located at 245 West 14th Street between Seventh and Eighth Avenues. Village Green West combines the modern, sustainable living environment with a design aesthetic reminiscent of the 19th century industrial era.">
+        <meta name="description" content="Located at 245 West 14th Street between Seventh and Eighth Avenues. Village Green West combines the modern, sustainable living environment with a design aesthetic reminiscentof the 19th century industrial era.">
         <title>Real Estate West Village, Meatpacking District & Chelsea NYC | Condos & Apartments For Sale in NYC | 245 West 14th Street</title>
 
 
@@ -53,26 +53,86 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+      <script type="text/javascript"
+              src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization&key=AIzaSyD1s9tLUoAcQTvjwerVQ37HWvAhmMPEJow">
+      </script>
+
+
+      <script>
+          var map;
+          var styles = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#193341"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#29768a"},{"lightness":-37}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#3e606f"},{"weight":2},{"gamma":0.84}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#1a3541"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#2c5a71"}]}];
+
+          var styledMap = new google.maps.StyledMapType(styles,
+                  {name: "Styled Map"});
+
+
+          function initialize() {
+              var mapOptions = {
+                  center: new google.maps.LatLng(40.739587, -74.001481),
+                  zoom: 15,
+                  mapTypeControlOptions: {
+                          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+                  }
+              };
+
+
+
+              map = new google.maps.Map(document.getElementById("map_canvas"),
+                      mapOptions);
+
+
+              var layer = new google.maps.visualization.MapsEngineLayer({
+                  mapId: '08014202610342195205-00161330875310406093',
+                  layerKey:'layer_00001',
+                  map: map,
+                  clickable: true,
+                  suppressInfoWindows: false
+              });
+              var mapsEngineLayer2 = new google.maps.visualization.MapsEngineLayer({
+                  mapId: '08014202610342195205-00161330875310406093',
+                  layerKey: 'layer_00002',
+                  map: map,
+                  clickable: true,
+                  suppressInfoWindows: false
+              });
+
+
+              mapsEngineLayer2.setMap(map);
+
+              map.mapTypes.set('map_style', styledMap);
+              map.setMapTypeId('map_style');
+
+          }
+
+          google.maps.event.addDomListener(window, 'load', initialize);
+          $("#map_html").show(function () {
+              var center = map.getCenter();
+              google.maps.event.trigger(map, "resize");
+              map.setCenter(center);
+          });
+
+          google.maps.event.addDomListener(window, 'resize', function() {
+              var center = map.getCenter();
+              google.maps.event.trigger(map, "resize");
+              map.setCenter(center);
+          });
+
+      </script>
     </head>
     <body>
        
         <header>
             
         </header>
+        <hr class="topline">
         <section id='main-content' style="height:100%;">
-            <div class="row" style="min-height:100%;background-color:#efeee9;position:relative;">
-                <div id="copyright">
-                                Alfa Development © 2013
-                                <g:plusone size="medium"></g:plusone>
-                            </div>
-                
-                <div class="small-12 columns" style="min-height:100%;">
-                    
-                    
-                     <div class="everything" style="min-height:100%">
-                        <div class="row" style="background-color:#efeee9; min-height:100%;">
-                    	<div class="small-3 columns" style="padding-top:20px;padding-right:0px;padding-left:20px;">
-                    	  <a renders-this="#building_html" class="logo" href="#"><img style="max-width:180px;" class="cent" src="images/Logo.gif"/></a>
+            <div class="row " style="max-height:100%;background-color:transparent;position:relative;">
+
+                <div class="small-12 columns " style="max-height:100%;">
+                     <div class="everything " style="max-height:100%">
+                        <div class="row " style="background-color:transparent; max-height:100%;">
+                    	<div class="small-3 columns" style="padding-top:20px;padding-right:10px;padding-left:20px;">
+                    	  <a renders-this="#building_html" class="logo" href="#"><img style="max-width:300px;" class="cent" src="images/new/logo_t_1200.png"/></a>
                     	  <div class="sidebar" style="padding-left:5px;position:relative;height:100%;">
                     	  	<a id="building-link" renders-this="#building_html" href="javascript:void(0)">THE BUILDING</a><br/>
                     	  	<a href="javascript:void(0)" id="residences" class="no-change">RESIDENCES</a><br/>
@@ -106,24 +166,30 @@
                             
                     	  </div>
                     	</div>
-                    	<div class="small-9 columns content-area" style="min-height: 100%;">
+
+                    	<div class="small-9 columns content-area " style="max-height: 100%;">
                     	
                     	</div>
                         </div>
-                    </div>
-                    </div>
-                </div>  
-            </div>
-        </section>
 
+                    </div>
+
+                    </div>
+
+            </div>
+
+          </div>
+        </section>
+        <div id="copyright">
+          <hr>Alfa Development © 2013
+          <g:plusone size="medium"></g:plusone>
+        </div>
 
         <div id="building_html" style="display:none;">
-          <div class="head">
-            The Building <hr>
-          </div>
-                                <div style="widht:705px; height:475px; border:4px solid white;position:relative;overflow-y:hidden;">
-                                <a href="images/Building.jpg" data-lightbox="building1">
-                                    <img id="pan" style="overflow:hidden;position:absolute;width:100%;" src="images/Building.jpg">
+
+                                <div style="width:100%; height:475px; border:0px solid white;position:relative;overflow-y:hidden;">
+                                <a href="images/new_hero_full.jpg" data-lightbox="building1">
+                                    <img id="pan" style="overflow:hidden;position:absolute;width:100%;" src="images/new_hero_full.jpg">
                                     </img>
                                 </a>
                                 </div>
@@ -131,26 +197,29 @@
                                 <!-- <ul data-orbit data-options="timer:false;slide_number:false;bullets:false;animation:'fade';">
                                     <li>
                                         <a href="images/Building.jpg" data-lightbox="building1">
-                                          <img class="cent white-border" src="images/Crops/Building.jpg" />
+                                          <img class="centwhite-border" src="images/Crops/Building.jpg" />
                                         </a>
                                     </li>
                                     <!-- <li>
                                         <a href="images/Building_02.jpg" data-lightbox="building1">
-                                          <img class="cent white-border" src="images/Building_02.jpg" />
+                                          <img class="centwhite-border" src="images/Building_02.jpg" />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="images/Building2.jpg" data-lightbox="building1">
-                                          <img class="cent white-border" src="images/Building2.jpg" />
+                                          <img class="centwhite-border" src="images/Building2.jpg" />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="images/Building3.jpg" data-lightbox="building1">
-                                          <img class="cent white-border" src="images/Building3.jpg" />
+                                          <img class="centwhite-border" src="images/Building3.jpg" />
                                         </a>
                                     </li>
                                 </ul> -->
                                   <div class="small-12 columns" style="padding: 0;">
+                                  <div class="head">
+                                    The Building <hr>
+                                  </div>
                                   <p class="nav-font">
                                     At the crossroads of three Manhattan neighborhoods,
                                     Village Green West inhabits a place
@@ -166,27 +235,28 @@
         </div>
 
         <div id="rez_html" style="display:none;">
-          <div class="head">
-            Residences › Living <hr>
-          </div>
+
             <ul data-orbit data-options="timer:false;slide_number:false;bullets:false;navigation_arrows:false;animation:'fade';">
                 <li>
-                    <a href="images/Residences.jpg" data-lightbox="Residences">
-                      <img class="cent white-border" src="images/Residences.jpg" />
+                    <a href="images/new/Residences.jpg" data-lightbox="Residences">
+                      <img class="cent" src="images/new/475/Residences.jpg" />
                     </a>
                 </li>
                 <!-- <li>
                     <a href="images/Kitchen-TEMP.jpg" data-lightbox="Residences">
-                      <img class="cent white-border" src="images/Kitchen-TEMP.jpg" />
+                      <img class="centwhite-border" src="images/Kitchen-TEMP.jpg" />
                     </a>
                 </li>
                 <li>
                     <a href="images/Bathroom-TEMP.jpg" data-lightbox="Residences">
-                      <img class="cent white-border" src="images/Bathroom-TEMP.jpg" />
+                      <img class="centwhite-border" src="images/Bathroom-TEMP.jpg" />
                     </a>
                 </li> -->
             </ul>
             <div class="small-12 columns" style="padding: 0;">
+            <div class="head">
+              Residences › Living <hr>
+            </div>
             <p class="nav-font">
                 Behind the elegant materials and residential finishes is a state of the art central heating and cooling system by Daikin and advanced air handling that provide precise temperature control and tempered filtered fresh air year-round.
             </p>
@@ -198,102 +268,95 @@
         </div>
 
         <div id="kitchens_html" style="display:none;">
-          <div class="head">
-            Residences › Kitchens <hr>
-          </div>
           <ul data-orbit data-options="timer:false;slide_number:false;bullets:true;animation:'fade';">
                 <li>
-                    <a href="images/Full/Kitchens/245Kitchen-01.jpg" data-lightbox="Kitchens">
-                      <img class="cent white-border" src="images/Full/Kitchens/245Kitchen-01.jpg" />
+                    <a href="images/new/245Kitchen-01.jpg" data-lightbox="Kitchens">
+                      <img class="cent" src="images/new/475/245Kitchen-01.jpg" />
                     </a>
                 </li>
                 <li>
-                    <a href="images/Full/Kitchens/245Kitchen-02.jpg" data-lightbox="Kitchens">
-                      <img class="cent white-border" src="images/Full/Kitchens/245Kitchen-02.jpg" />
+                    <a href="images/new/245Kitchen-02.jpg" data-lightbox="Kitchens">
+                      <img class="cent" src="images/new/475/245Kitchen-02.jpg" />
                     </a>
                 </li>
                 <li>
-                    <a href="images/Full/Kitchens/245Kitchen-03.jpg" data-lightbox="Kitchens">
-                      <img class="cent white-border" src="images/Full/Kitchens/245Kitchen-03.jpg" />
+                    <a href="images/new/245Kitchen-03.jpg" data-lightbox="Kitchens">
+                      <img class="cent" src="images/new/475/245Kitchen-03.jpg" />
                     </a>
                 </li>
                 <li>
-                    <a href="images/Full/Kitchens/245Kitchen-04.jpg" data-lightbox="Kitchens">
-                      <img class="cent white-border" src="images/Full/Kitchens/245Kitchen-04.jpg" />
+                    <a href="images/new/245Kitchen-04.jpg" data-lightbox="Kitchens">
+                      <img class="cent" src="images/new/475/245Kitchen-04.jpg" />
                     </a>
                 </li>
                 <li>
-                    <a href="images/Full/Kitchens/245Kitchen-05.jpg" data-lightbox="Kitchens">
-                      <img class="cent white-border" src="images/Full/Kitchens/245Kitchen-05.jpg" />
+                    <a href="images/new/245Kitchen-05.jpg" data-lightbox="Kitchens">
+                      <img class="cent" src="images/new/475/245Kitchen-05.jpg" />
                     </a>
                 </li>
             </ul>
-            <div class="small-9 columns" style="padding: 0;">
-            <p style="margin-top:-20px !important;" class="nav-font">
+            <div class="small-12 columns" style="padding: 0;">
+            <div class="head-gal">
+              Residences › Kitchens <hr>
+            </div>
+            <p class="nav-font">
                 The timeless appeal of Siematic custom cabinetry with a fully integrated Liebherr refrigerator and Bosch dishwasher,
                 are partnered with the bold lines of a Smeg cooktop and oven.
             </p>
             </div>
-            <div class="small-3 columns controls">
-                <img class="left_arrow" style="cursor:pointer;" src="images/left_aarow.png"/>
-                <img class="right_arrow" style="cursor:pointer;" src="images/right_aarow.png"/>
-            </div>
         </div>
 
         <div id="bathrooms_html" style="display:none;">
-          <div class="head">
-            Residences › Bathrooms <hr>
-          </div>
           <ul data-orbit data-options="timer:false;slide_number:false;bullets:true;animation:'fade';">
                 <li>
-                    <a href="images/Full/Bathrooms/245Bathroom-01.jpg" data-lightbox="Bathroom">
-                      <img class="cent white-border" src="images/Full/Bathrooms/245Bathroom-01.jpg" />
+                    <a href="images/new/245Bathroom-01.jpg" data-lightbox="Bathroom">
+                      <img class="cent" src="images/new/475/245Bathroom-01.jpg" />
                     </a>
                 </li>
                 <li>
-                    <a href="images/Full/Bathrooms/245Bathroom-02.jpg" data-lightbox="Bathroom">
-                      <img class="cent white-border" src="images/Full/Bathrooms/245Bathroom-02.jpg" />
+                    <a href="images/new/245Bathroom-02.jpg" data-lightbox="Bathroom">
+                      <img class="cent" src="images/new/475/245Bathroom-02.jpg" />
                     </a>
                 </li>
                 <li>
-                    <a href="images/Full/Bathrooms/245Bathroom-03.jpg" data-lightbox="Bathroom">
-                      <img class="cent white-border" src="images/Full/Bathrooms/245Bathroom-03.jpg" />
+                    <a href="images/new/245Bathroom-03.jpg" data-lightbox="Bathroom">
+                      <img class="cent" src="images/new/475/245Bathroom-03.jpg" />
                     </a>
                 </li>
             </ul>
-            <div class="small-9 columns" style="padding: 0;">
-            <p style="margin-top:-20px !important;" class="nav-font">
+            <div class="small-12 columns" style="padding: 0;">
+                <div class="head-gal">
+                Residences › Bathrooms <hr>
+                </div>
+                <p class="nav-font">
                 The master baths are entirely finished from floor to ceiling in stone and glass, accented with polished nickel Lefroy Brooks Mackintosh fittings. radiant-heated marble mosaic floors are warm underfoot, while glass enclosed showers, marble clad deep-soaking tubs, and Robern medicine cabinets combine to complete your sanctuary.
-            </p>
+                </p>
             </div>
-            <div class="small-3 columns controls">
-                <img class="left_arrow" style="cursor:pointer;" src="images/left_aarow.png"/>
-                <img class="right_arrow" style="cursor:pointer;" src="images/right_aarow.png"/>
-            </div>   
         </div>
 
         <div id="penthouses_html" style="display:none;">
-          <div class="head">
-             Residences › Tower Residences  <hr>
-          </div>
+
           <ul data-orbit data-options="timer:false;slide_number:false;bullets:false;navigation_arrows:false;animation:'fade';">
                 <li>
-                    <a href="images/Penthouses.jpg" data-lightbox="Penthouses">
-                      <img class="cent white-border" src="images/Crops/Penthouse.jpg" />
+                    <a href="images/new/Penthouses.jpg" data-lightbox="Penthouses">
+                      <img class="cent" src="images/new/475/Penthouses.jpg" />
                     </a>
                 </li>
                <!--  <li>
                     <a href="images/Penthouses2.jpg" data-lightbox="Penthouses">
-                      <img class="cent white-border" src="images/Penthouses2.jpg" />
+                      <img class="centwhite-border" src="images/Penthouses2.jpg" />
                     </a>
                 </li>
                 <li>
                     <a href="images/Penthouses3.jpg" data-lightbox="Penthouses">
-                      <img class="cent white-border" src="images/Penthouses3.jpg" />
+                      <img class="centwhite-border" src="images/Penthouses3.jpg" />
                     </a>
                 </li> -->
             </ul>
             <div class="small-12 columns" style="padding: 0;">
+            <div class="head">
+              Residences › Tower Residences  <hr>
+            </div>
             <p class="nav-font">
                 This perfect location provides an unusual abundance of light and openness for the full-floor Tower residences and Penthouse. These special apartments celebrate the downtown “loft” experience with expansive kitchens that open elegantly into the airy living spaces.
             </p>
@@ -305,27 +368,28 @@
         </div>
 
         <div id="amenities_html" style="display:none;">
-          <div class="head">
-            Amenities › Lobby <hr>
-          </div>
+
           <ul data-orbit data-options="timer:false;slide_number:false;bullets:false;navigation_arrows:false;animation:'fade';">
                 <li>
-                    <a href="images/Amenities.jpg" data-lightbox="Amenities">
-                      <img class="cent white-border" src="images/Crops/Amenities.jpg" />
+                    <a href="images/new/Amenities.jpg" data-lightbox="Amenities">
+                      <img class="cent" src="images/new/475/Amenities.jpg" />
                     </a>
                 </li>
                 <!-- <li>
                     <a href="images/BetterLiving.jpg" data-lightbox="Amenities">
-                      <img class="cent white-border" src="images/BetterLiving.jpg" />
+                      <img class="centwhite-border" src="images/BetterLiving.jpg" />
                     </a>
                 </li>
                 <li>
                     <a href="images/OpenAir.jpg" data-lightbox="Amenities">
-                      <img class="cent white-border" src="images/OpenAir.jpg" />
+                      <img class="centwhite-border" src="images/OpenAir.jpg" />
                     </a>
                 </li> -->
             </ul>
             <div class="small-12 columns" style="padding: 0;">
+            <div class="head">
+              Amenities › Lobby <hr>
+            </div>
             <p class="nav-font">
                 When you enter the lobby, the air changes—for the better. With systems that circulate filtered fresh air throughout the building, Village Green West welcomes residents and guests with much more than the visible elegance and sophistication of the lobby’s design and the assistance of the concierge staff. 
             </p>
@@ -337,27 +401,28 @@
         </div>
 
         <div id="better_living_html" style="display:none;">
-          <div class="head">
-            Amenities › Wellness Center <hr>
-          </div>
+
           <ul data-orbit data-options="timer:false;slide_number:false;bullets:false;navigation_arrows:false;animation:'fade';">
                 <li>
-                    <a href="images/BetterLiving.jpg" data-lightbox="BetterLiving">
-                      <img class="cent white-border" src="images/Crops/BetterLiving.jpg" />
+                    <a href="images/new/BetterLiving.jpg" data-lightbox="BetterLiving">
+                      <img class="cent" src="images/new/475/BetterLiving.jpg" />
                     </a>
                 </li>
                 <!-- <li>
                     <a href="images/BetterLiving2.jpg" data-lightbox="BetterLiving">
-                      <img class="cent white-border" src="images/BetterLiving2.jpg" />
+                      <img class="centwhite-border" src="images/BetterLiving2.jpg" />
                     </a>
                 </li>
                 <li>
                     <a href="images/BetterLiving3.jpg" data-lightbox="BetterLiving">
-                      <img class="cent white-border" src="images/BetterLiving3.jpg" />
+                      <img class="centwhite-border" src="images/BetterLiving3.jpg" />
                     </a>
                 </li> -->
             </ul>
             <div class="small-12 columns" style="padding: 0;">
+            <div class="head">
+              Amenities › Wellness Center <hr>
+            </div>
             <p class="nav-font">
                 The highest standard quality of life must include Wellness; health of the body, the mind, the environment, and the spirit. Village Green West supports the Wellness of its residents by providing custom-designed facilities for exercise, recreation, and spa treatments.
             </p>
@@ -369,27 +434,28 @@
         </div>
 
         <div id="open_air_html" style="display:none;">
-            <div class="head">
-                Amenities › Rooftop Lounge <hr/>
-            </div>
+
             <ul data-orbit data-options="timer:false;slide_number:false;bullets:false;navigation_arrows:false;animation:'fade';">
                 <li>
                     <a href="images/Roof-Lounge.jpg" data-lightbox="OpenAir">
-                      <img class="cent white-border" src="images/Roof-Lounge.jpg" />
+                      <img class="cent" src="images/new/475/Roof-Lounge.jpg" />
                     </a>
                 </li>
                 <!-- <li>
                     <a href="images/OpenAir2.jpg" data-lightbox="OpenAir">
-                      <img class="cent white-border" src="images/OpenAir2.jpg" />
+                      <img class="centwhite-border" src="images/OpenAir2.jpg" />
                     </a>
                 </li>
                 <li>
                     <a href="images/OpenAir3.jpg" data-lightbox="OpenAir">
-                      <img class="cent white-border" src="images/OpenAir3.jpg" />
+                      <img class="centwhite-border" src="images/OpenAir3.jpg" />
                     </a>
                 </li> -->
             </ul>
             <div class="small-12 columns" style="padding: 0;">
+            <div class="head">
+              Amenities › Rooftop Lounge <hr/>
+            </div>
             <p class="nav-font">
                 At Village Green West, residents have the opportunity to enjoy open space on their private terraces or balconies, or at the idyllic rooftop lounge— any of which are perfect for hosting a summer cocktail party, enjoying a morning coffee, or just relaxing in the sun.
             </p>
@@ -401,186 +467,182 @@
         </div>
 
         <div id="neigh_html" style="display:none;">
-          <div class="head">One Building, Three Neighborhoods<hr/></div> 
-          <ul data-orbit data-options="timer:false;slide_number:false;animation:'fade';animationSpeed: 2000">
+
+          <ul data-orbit data-options="timer:false;slide_number:false;bullets:true;animation:'fade';">
                 <li>
-                    <a href="images/Full/Neigborhood/Neigh1and2.jpg" data-lightbox="Neighborhood">
-                      <img class="cent white-border" src="images/Full/Neigborhood/Neigh1and2.jpg" />
+                    <a href="images/new/Neigh3.jpg" data-lightbox="Neighborhood">
+                      <img class="cent" src="images/new/475/Neigh3.jpg" />
                     </a>
                 </li>
                 <li>
-                    <a href="images/Full/Neigborhood/Neigh3.jpg" data-lightbox="Neighborhood">
-                      <img class="cent white-border" src="images/Full/Neigborhood/Neigh3.jpg" />
+                   <a href="images/new/Neigh4.jpg" data-lightbox="Neighborhood">
+                      <img class="cent" src="images/new/475/Neigh4.jpg" />
                     </a>
                 </li>
                 <li>
-                   <a href="images/Full/Neigborhood/Neigh4.jpg" data-lightbox="Neighborhood">
-                      <img class="cent white-border" src="images/Full/Neigborhood/Neigh4.jpg" />
+                    <a href="images/new/Neigh5.jpg" data-lightbox="Neighborhood">
+                      <img class="cent" src="images/new/475/Neigh5.jpg" />
                     </a>
                 </li>
                 <li>
-                    <a href="images/Full/Neigborhood/Neigh5.jpg" data-lightbox="Neighborhood">
-                      <img class="cent white-border" src="images/Full/Neigborhood/Neigh5.jpg" />
+                    <a href="images/new/Neigh8.jpg" data-lightbox="Neighborhood">
+                      <img class="cent" src="images/new/475/Neigh8.jpg" />
+                    </a>
+                </li>
+
+                <li>
+                    <a href="images/new/Neigh10.jpg" data-lightbox="Neighborhood">
+                      <img class="cent" src="images/new/475/Neigh10.jpg" />
                     </a>
                 </li>
                 <li>
-                    <a href="images/Full/Neigborhood/Neigh6.jpg" data-lightbox="Neighborhood">
-                      <img class="cent white-border" src="images/Full/Neigborhood/Neigh6.jpg" />
-                    </a>
-                </li>
-                <li>
-                    <a href="images/Full/Neigborhood/Neigh7.jpg" data-lightbox="Neighborhood">
-                      <img class="cent white-border" src="images/Full/Neigborhood/Neigh7.jpg" />
-                    </a>
-                </li>
-                <li>
-                    <a href="images/Full/Neigborhood/Neigh8.jpg" data-lightbox="Neighborhood">
-                      <img class="cent white-border" src="images/Full/Neigborhood/Neigh8.jpg" />
-                    </a>
-                </li>
-                <li>
-                    <a href="images/Full/Neigborhood/Neigh9.jpg" data-lightbox="Neighborhood">
-                      <img class="cent white-border" src="images/Full/Neigborhood/Neigh9.jpg" />
-                    </a>
-                </li>
-                <li>
-                    <a href="images/Full/Neigborhood/Neigh10.jpg" data-lightbox="Neighborhood">
-                      <img class="cent white-border" src="images/Full/Neigborhood/Neigh10.jpg" />
-                    </a>
-                </li>
-                <li>
-                    <a href="images/Full/Neigborhood/Neigh11.jpg" data-lightbox="Neighborhood">
-                      <img class="cent white-border" src="images/Full/Neigborhood/Neigh11.jpg" />
+                    <a href="images/new/Neigh11.jpg" data-lightbox="Neighborhood">
+                      <img class="cent" src="images/new/475/Neigh11.jpg" />
                     </a>
                 </li>
             </ul>
-            <div class="small-9 columns" style="padding: 0;">
-            <p style="margin-top:-20px !important;" class="nav-font">
-                Originally known for its bohemian culture, the West Village today is a mecca for high-end retail and acclaimed
-                restaurants while steps away, Chelsea and the Meatpacking District have transitioned from their industrial past to
-                become home to Manhattan’s hottest galleries, shopping, and nightlife.
-            </p>
-            </div>
-            <div class="small-3 columns controls">
-                <img class="left_arrow" style="cursor:pointer;" src="images/left_aarow.png"/>
-                <img class="right_arrow" style="cursor:pointer;" src="images/right_aarow.png"/>
+            <div class="small-12 columns" style="padding: 0;">
+              <div class="head">One Building, Three Neighborhoods<hr/></div>
+                  <p  class="nav-font">
+                    Originally known for its bohemian culture, the West Village today is a mecca for high-end retail and acclaimed
+                    restaurants while steps away, Chelsea and the Meatpacking District have transitioned from their industrial past to
+                    become home to Manhattan’s hottest galleries, shopping, and nightlife.
+                </p>
             </div>
         </div>
 
         <div id="map_html" style="display:none;">
-          <div class="head">
-             One Building, Three Neighborhoods <hr>
-          </div>
-          <div class="row">
-            <div class="large-4 columns">
-              <div class="section-container accordion map-accordion" data-section="accordion">
-                                      <section>
-                                        <p class="title" data-section-title><a class="close-accordion-hack" href="#" style="border-top:0!important;">SHOPPING</a></p>
-                                        <div class="content" data-section-content>
-                                          <p class="map-list" style="margin-top:0 !important;">
-                                            <b>1</b> Apple Store </br>
-                                            <b>2</b> Burberry<br/>
-                                            <b>3</b> Commes des Garcons<br/>
-                                            <b>4</b> Kiehls<br/>
-                                            <b>5</b> Marc Jacobs<br/>
-                                            <b>6</b> Diane von Furstenberg<br/>
-                                            <b>7</b> Theory<br/>
-                                            <b>8</b> Jeffrey<br/>
-                                            <b>9</b> Alexander McQueen<br/>
-                                          </p>
-                                        </div>
-                                      </section>
-                                      <section>
-                                        <p class="title" data-section-title><a class="close-accordion-hack" href="#">FOOD & WINE<br/>MARKETS</a></p>
-                                        <div class="content" data-section-content>
-                                          <p class="map-list" style="margin-top:0 !important;">
-                                            <b>10</b> Chelsea Market<br/>
-                                            <b>11</b> Associated<br/>
-                                            <b>12</b> Union Square Greenmarket<br/>
-                                            <b>13</b> Trader Joe's<br/>
-                                            <b>14</b> Whole Foods<br/>
-                                          </p>
-                                        </div>
-                                      </section>
-                                      <section>
-                                        <p class="title" data-section-title><a class="close-accordion-hack" href="#">OUTDOOR/<br/>RECREATIONAL/<br/>WELLNESS</a></p>
-                                        <div class="content" data-section-content>
-                                          <p class="map-list" style="margin-top:0 !important;">
-                                            <b>15</b> Chelsea Piers<br/>
-                                            <b>16</b> The Highline<br/>
-                                            <b>17</b> Integral Yoga<br/>
-                                            <b>18</b> Hudson River Park<br/>
-                                            <b>19</b> Bleecker Playground<br/>
-                                          </p>
-                                        </div>
-                                      </section>
-                                      <section>
-                                        <p class="title" data-section-title><a class="close-accordion-hack" href="#">NIGHTLIFE/HOTELS/<br/>ENTERTAINMENT</a></p>
-                                        <div class="content" data-section-content>
-                                          <p class="map-list" style="margin-top:0 !important;">
-                                            <b>20</b> Gansevoort<br/>
-                                            <b>21</b> Maritime<br/>
-                                            <b>22</b> SoHo House<br/>
-                                            <b>23</b> Norwood Club<br/>
-                                            <b>24</b> Highline Ballroom<br/>
-                                            <b>25</b> The Standard<br/>
-                                            <b>26</b> Joyce Theater<br/>
-                                          </p>
-                                        </div>
-                                      </section>
-                                      <section>
-                                        <p class="title" data-section-title><a class="close-accordion-hack" href="#" style="border-bottom:2px solid black;">RESTAURANTS</a></p>
-                                        <div class="content" data-section-content>
-                                          <p class="map-list" style="margin-top:0 !important;">
-                                            <b>27</b> Barbuto<br/>
-                                            <b>28</b> Del Posto<br/>
-                                            <b>29</b> Morimoto<br/>
-                                            <b>30</b> Pastis<br/>
-                                            <b>31</b> Alison Eighteen<br/>
-                                            <b>32</b> Cafe Cluny<br/>
-                                            <b>33</b> Corner Bistro<br/>
-                                            <b>34</b> Spice Market<br/>
-                                            <b>35</b> Crispo<br/>
-                                            <b>36</b> The Darby<br/>
-                                          </p>
-                                        </div>
-                                      </section>
+
+           <div class="row">
+
+             <div class="large-4 columns">
+               <div class="section-container accordion map-accordion" data-section="accordion">
+                                       <section>
+                                         <p class="title" data-section-title><a class="close-accordion-hack" href="#" style="border-top:0!important;">SHOPPING</a></p>
+                                         <div class="content" data-section-content>
+                                           <p class="map-list" style="margin-top:0 !important;">
+                                             <b>1</b> Apple Store </br>
+                                             <b>2</b> Burberry<br/>
+                                             <b>3</b> Commes des Garcons<br/>
+                                             <b>4</b> Kiehls<br/>
+                                             <b>5</b> Marc Jacobs<br/>
+                                             <b>6</b> Diane von Furstenberg<br/>
+                                             <b>7</b> Theory<br/>
+                                             <b>8</b> Jeffrey<br/>
+                                             <b>9</b> Alexander McQueen<br/>
+                                           </p>
+                                         </div>
+                                       </section>
+                                       <section>
+                                         <p class="title" data-section-title><a class="close-accordion-hack" href="#">FOOD & WINE<br/>MARKETS</a></p>
+                                         <div class="content" data-section-content>
+                                           <p class="map-list" style="margin-top:0 !important;">
+                                             <b>10</b> Chelsea Market<br/>
+                                             <b>11</b> Associated<br/>
+                                             <b>12</b> Union Square Greenmarket<br/>
+                                             <b>13</b> Trader Joe's<br/>
+                                             <b>14</b> Whole Foods<br/>
+                                           </p>
+                                         </div>
+                                       </section>
+                                       <section>
+                                         <p class="title" data-section-title><a class="close-accordion-hack" href="#">OUTDOOR/<br/>RECREATIONAL/<br/>WELLNESS</a></p>
+                                         <div class="content" data-section-content>
+                                           <p class="map-list" style="margin-top:0 !important;">
+                                             <b>15</b> Chelsea Piers<br/>
+                                             <b>16</b> The Highline<br/>
+                                             <b>17</b> Integral Yoga<br/>
+                                             <b>18</b> Hudson River Park<br/>
+                                             <b>19</b> Bleecker Playground<br/>
+                                           </p>
+                                         </div>
+                                       </section>
+                                       <section>
+                                         <p class="title" data-section-title><a class="close-accordion-hack" href="#">NIGHTLIFE/HOTELS/<br/>ENTERTAINMENT</a></p>
+                                         <div class="content" data-section-content>
+                                           <p class="map-list" style="margin-top:0 !important;">
+                                             <b>20</b> Gansevoort<br/>
+                                             <b>21</b> Maritime<br/>
+                                             <b>22</b> SoHo House<br/>
+                                             <b>23</b> Norwood Club<br/>
+                                             <b>24</b> Highline Ballroom<br/>
+                                             <b>25</b> The Standard<br/>
+                                             <b>26</b> Joyce Theater<br/>
+                                           </p>
+                                         </div>
+                                       </section>
+                                       <section>
+                                         <p class="title" data-section-title><a class="close-accordion-hack" href="#" style="border-bottom:1px solid black;">RESTAURANTS</a></p>
+                                         <div class="content" data-section-content>
+                                           <p class="map-list" style="margin-top:0 !important;">
+                                             <b>27</b> Barbuto<br/>
+                                             <b>28</b> Del Posto<br/>
+                                             <b>29</b> Morimoto<br/>
+                                             <b>30</b> Pastis<br/>
+                                             <b>31</b> Alison Eighteen<br/>
+                                             <b>32</b> Cafe Cluny<br/>
+                                             <b>33</b> Corner Bistro<br/>
+                                             <b>34</b> Spice Market<br/>
+                                             <b>35</b> Crispo<br/>
+                                             <b>36</b> The Darby<br/>
+                                           </p>
+                                         </div>
+                                       </section>
+               </div>
+             </div>
+
+
+              <div class="large-8 columns">
+                <a href="images/Map.jpg" data-reveal-id="myModal">
+                  <img class="cent white-border" src="images/Map.jpg" id="map_img" />
+                </a>
               </div>
+             <div class="small-12 columns" style="padding: 0;">
+               <div class="head">
+                 One Building, Three Neighborhoods <hr>
+               </div>
+             </div>
+
+
             </div>
-            <div class="large-8 columns">
-              <a href="images/Map.jpg" data-reveal-id="myModal">
-                <img class="cent white-border" src="images/Map.jpg" id="map_img" />
-              </a>
-            </div>
+
           </div>
         </div>
 
         <div id="avail_html" style="display:none;">
-            <div class="head">
-                Availability <hr/>
-            </div>
-                                <!-- <ul data-orbit data-options="timer:false;slide_number:false;bullets:false;navigation_arrows:false;animation:'fade';">
-                                    <li data-orbit-slide="T1">
-                                        <a href="images/Floorplans/245_Flrplns_2C.gif" data-lightbox="Floorplan">
-                                          <img class="cent white-border" src="images/Floorplans/245_Flrplns_2C.gif" />
-                                        </a>
-                                    </li>
-                                    <li data-orbit-slide="3B">
-                                        <a href="images/Floorplans/245_Flrplns_2A-6A.gif" data-lightbox="Floorplan">
-                                          <img class="cent white-border" src="images/Floorplans/245_Flrplns_2A-6A.gif" />
-                                        </a>
-                                    </li>
-                                    <li data-orbit-slide="3C">
-                                        <a href="images/Floorplans/245_Flrplns_2A-6A3.gif" data-lightbox="Floorplan">
-                                          <img class="cent white-border" src="images/Floorplans/245_Flrplns_2A-6A3.gif" />
-                                        </a>
-                                    </li>
-                                </ul>-->
+            <div class="small-12 columns" style="padding: 0;">
+                <div class="head">
+                      Availability <hr/>
+                  </div>
+                For availability <a style="color: rgba(0,200,200,1)" target="_blank" href="http://www.corcoran.com/nyc/NewDevelopments/Display/582"> click here. </a>
+                <script>
+                    if (window.XMLHttpRequest)
+                    {// code for IE7+, Firefox, Chrome, Opera, Safari
+                        xmlhttp=new XMLHttpRequest();
+                    }
+                    else
+                    {// code for IE6, IE5
+                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xmlhttp.open("GET","http://corcoransunshine.com/newdevxml/582NewDevs.xml",false);
+                    var origin = (xmlhttp.headers.origin || "*");
 
-                                
-                                    For availability <a target="_blank" href="http://www.corcoran.com/nyc/NewDevelopments/Display/582"> click here. </a>
-                                
+                    xmlhttp.send();
 
+                    xmlDoc=xmlhttp.responseXML;
+
+                    document.write("<table border='1'>");
+                    var x=xmlDoc.getElementsByTagName("Listing");
+                    for (i=0;i<x.length;i++)
+                    {
+                        document.write("<tr><td>");
+                        document.write(x[i].getElementsByTagName("Location")[0].childNodes[0].nodeValue);
+                        document.write("</td><td>");
+                        document.write(x[i].getElementsByTagName("Basic Details")[0].childNodes[0].nodeValue);
+                        document.write("</td></tr>");
+                    }
+                    document.write("</table>");
+                </script>
  <!--                                      <br/>
                             <div class='row'>
                                                 <div class='large-12 columns'>
@@ -766,14 +828,14 @@
              Team <hr>
             </div>
                             <div class="small-12 columns" style="padding-left:0;">
-                                <img style="max-width: 100% !important;" class="cent white-border" src='images/Team.jpg'/>
-                                <p>
+                                <img style="max-width: 100% !important;" class="cent" src='images/Team.jpg'/>
+                                <p class="text-justify">
                                     Composed of longtime residents of the downtown Manhattan area, the Alfa Development team has firsthand knowledge of the downtown
                                     experience. Always mindful of how their buildings will become part of the fabric of their community, Alfa’s guiding principle is best articulated
                                     by the theme line: “History, architecture, and sustainability on a human scale.” With an aesthetic attuned to the unique harmonies of
                                     each neighborhood, their buildings combine architecturally contextual exteriors with the most finely appointed modern interiors.
                                 </p>
-                                <p>
+                                <p class="text-justify">
                                     Michael Namer has been developing real estate in downtown New York for the last 30 years. As the founder, principal, and Managing
                                     Member of Alfa Development/Management LLC, Michael brings his attention to detail, construction expertise, and hands-on approach
                                     to real estate development to every project. In the last five years, Alfa Development has produced over $150,000,000 of residential condominium
@@ -783,10 +845,12 @@
                                 <br/>
                                 <br/>
                             </div>
-                            <div class="small-6 columns" style="padding-left:0;">
-                                    <img class="white-border" src="images/Team3.jpg" style="max-width:150px;" /><br/>
-                                    <p>
-                                        KUTNICKI BERNSTEIN ARCHITECTS <br/>
+
+                            <div class="small-5 columns" style="padding-left:0;">
+                                    <img class="cent" src="images/Team3.jpg" style="max-width:150px;" /><br/>
+                                    <h4 class="text-center">KUTNICKI BERNSTEIN ARCHITECTS</h4>
+                                    <hr>
+                                    <p class="text-justify">
                                         Innovation and inspiration are the defining components of buildings 
                                         designed by Kutnicki Bernstein Architects. The 30 person firm 
                                         is composed of studios which explore each project in depth and 
@@ -798,12 +862,14 @@
                                         educational and innovative urban planning.
                                     </p>
                             </div>
-                            <div class="small-6 columns" style="padding-left:0;">
-                                    <img class="white-border" src="images/Team2.jpg" style="max-width:150px;" />
-                                    <img class="white-border" src="images/Team1.jpg" style="max-width:150px;" />
-                                    <br/>
-                                    <p>
-                                        CORCORAN GROUP MARKETING,<br/> EXCLUSIVE SALES & MARKETING<br/> 
+                            <div class="small-1 columns">
+                            </div>
+                            <div class="small-5 columns" style="padding-left:0;">
+                                    <img src="images/Team2.jpg" style="max-width:150px;" />
+                                    <img src="images/Team1.jpg" style="max-width:150px;" /><br/>
+                                    <h4 class="text-center">CORCORAN GROUP MARKETING,<br/> EXCLUSIVE SALES & MARKETING</h4>
+                                    <hr>
+                                    <p class="text-justify">
                                         Corcoran Group Marketing is an affiliate of Corcoran Sunshine 
                                         Marketing Group. With 25 years of experience in marketing and 
                                         collective sales in excess of $25 billion, Corcoran Sunshine 
@@ -826,7 +892,7 @@
                                     <p>
                                       <span class="press-span">
                                         <a href="images/Full/Press/nypost.pdf" download="nypost">
-                                          <img class="cent white-border" src="images/Full/Press/nypost.jpg" />
+                                          <img class="cent" src="images/Full/Press/nypost.jpg" />
                                         </a><br/>
                                         <a href="images/Full/Press/nypost.pdf" download="nypost"><b>NY Post - The Big 12 - Village Green West 9/19/13</b></a>
                                       </span>
@@ -834,7 +900,7 @@
                                     <p>
                                       <span class="press-span">
                                         <a href="images/Full/Press/realdeal.pdf" download="realdeal">
-                                          <img class="cent white-border" src="images/Full/Press/realdeal.jpg" />
+                                          <img class="cent" src="images/Full/Press/realdeal.jpg" />
                                         </a><br/>
                                         <a href="images/Full/Press/realdeal.pdf" download="realdeal"><b>The Real Deal - Real estate and art collide - 9/27/13</b></a>
                                       </span>
@@ -842,7 +908,7 @@
                                    <p>
                                       <span class="press-span">
                                         <a href="images/Full/Press/Crain.pdf" download="Crain">
-                                          <img class="cent white-border" src="images/Full/Press/Crain.jpg" />
+                                          <img class="cent" src="images/Full/Press/Crain.jpg" />
                                         </a><br/>
                                         <a href="images/Full/Press/Crain.pdf" download="Crain"><b>Crain's New York - Michael Namer - Print - 8/27-9/9/2012</b></a>
                                       </span>
@@ -850,7 +916,7 @@
                                     <p>
                                       <span class="press-span">
                                         <a href="images/Full/Press/nyt.pdf" download="nyt">
-                                          <img class="cent white-border" src="images/Full/Press/nyt.jpg" />
+                                          <img class="cent" src="images/Full/Press/nyt.jpg" />
                                         </a><br/>
                                         <a href="images/Full/Press/nyt.pdf" download="nyt"><b>New York Times - Michael Namer (Print) 10/17/2012</b></a>
                                       </span>
@@ -858,7 +924,7 @@
                                     <p>
                                       <span class="press-span">
                                         <a href="images/Full/Press/realdeal2.pdf" download="realdeal2">
-                                          <img class="cent white-border" style="width:369px;" src="images/Full/Press/realdeal2.jpg" />
+                                          <img class="cent" style="width:369px;" src="images/Full/Press/realdeal2.jpg" />
                                         </a><br/>
                                         <a href="images/Full/Press/realdeal2.pdf" download="realdeal2"><b>The Real Deal - At the Desk Of Michael Namer 9/1/2013</b></a>
                                       </span>
@@ -872,7 +938,7 @@
                                     Contact <hr>
                                 </div>
                                <p style="text-align:center;">
-                                <img class="cent white-border" src='images/contact.jpg'/><br/>
+                                <img class="cent" src='images/contact.jpg'/><br/>
                                </p>
                                 <h4>VILLAGE GREEN WEST SALES GALLERY</h4>
                             <p style="font-size:10pt;">
@@ -1023,7 +1089,7 @@
                             <p>
                                 All dimensions are approximate and subject to normal construction variances and tolerances. We reserve the right to make changes due to unforeseen conditions and in accordance with the offering plan. For exact measurements you must hire our own architect or engineer.
                             </p>
-                            <img class="cent white-border" src='images/small-logo.gif' />
+                            <img class="cent legal" src='images/small-logo.gif' />
                             </div>
         </div>
 
@@ -1105,9 +1171,11 @@
               </div>
             </div>
             <div class="large-8 columns">
-              <a href="images/Map.jpg">
-                <img class="white-border" style="max-width:100%;max-height:100%;" src="images/Map.jpg" id="map_img" />
-              </a>
+
+              <div id="map_canvas" style="width: 100%; height: 100%">
+
+              </div>
+
             </div>
           </div>
             <a class="close-reveal-modal"><img src="images/Close.png"></img></a>
@@ -1212,13 +1280,13 @@
                
                 //move orbit bullets to after the slideshow arrows
                 //$(".content-area > .orbit-container > .orbit-bullets").insertAfter((".content-area > .controls"));
-                $(".content-area > .orbit-container > .orbit-bullets").insertAfter((".content-area > img.cent.white-border"));
+                $(".content-area > .orbit-container > .orbit-bullets").insertAfter((".content-area > img.cent"));
 
                //resize orbit-container to fit slideshow contents
                 if ($('.orbit-container ul').height() === 0) {
                         console.log("height is zero")
                         $(window).trigger('resize');
-                        //$('.orbit-container ul').height(360);
+                        $('.orbit-container ul').height(300);
                 }
 
                 //handlers for sub links
@@ -1299,17 +1367,17 @@
 
                 $(".content-area > .controls").on('click','img.left_arrow', function(event){
                     $(".content-area > .orbit-container > .orbit-prev").trigger( "click" );
-                    $(".content-area > .orbit-container > .orbit-bullets").insertAfter((".content-area > img.cent.white-border"));
+                    $(".content-area > .orbit-container > .orbit-bullets").insertAfter((".content-area > img.cent"));
 
                 });
                 $(".content-area > .controls").on('click','img.right_arrow', function(event){
                     $(".content-area > .orbit-container > .orbit-next").trigger( "click" );
-                    $(".content-area > .orbit-container > .orbit-bullets").insertAfter((".content-area > img.cent.white-border"));
+                    $(".content-area > .orbit-container > .orbit-bullets").insertAfter((".content-area > img.cent"));
 
                 });
 
                 //$(".content-area > .orbit-container > .orbit-bullets").insertAfter((".content-area > .controls"));
-                $(".content-area > .orbit-container > .orbit-bullets").insertAfter((".content-area > img.cent.white-border"));
+                $(".content-area > .orbit-container > .orbit-bullets").insertAfter((".content-area > img.cent"));
 
 
                 $('.sidebar a, .logo').on('click', function() {
@@ -1322,9 +1390,9 @@
                     }, 1);
                 });
 
-                $('.sidebar a').on('click', function(event){
-                    document.location.hash = event.currentTarget.id;
-                });
+//                $('.sidebar a').on('click', function(event){
+//                    document.location.hash = event.currentTarget.id;
+//                });
 
 
             });

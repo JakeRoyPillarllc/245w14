@@ -17,3 +17,4 @@ pickle-email-*.html
 /nbproject/private/
 .DS_Store
 .idea/
+/public/javascripts/.DS_Store

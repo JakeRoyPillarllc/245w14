@@ -7,3 +7,5 @@ run Rack::URLMap.new({
 })
 
 #run Sinatra::Application
+#require 'sass/plugin/rack'
+#use Sass::Plugin::Rack
