@@ -134,35 +134,35 @@
                     	<div class="small-3 columns" style="padding-top:20px;padding-right:10px;padding-left:20px;">
                     	  <a renders-this="#building_html" class="logo" href="#"><img style="max-width:300px;" class="cent" src="images/new/logo_t_1200.png"/></a>
                     	  <div class="sidebar" style="padding-left:5px;position:relative;height:100%;">
-                    	  	<a id="building-link" renders-this="#building_html" href="javascript:void(0)">THE BUILDING</a><br/>
-                    	  	<a href="javascript:void(0)" id="residences" class="no-change">RESIDENCES</a><br/>
+                    	  	<a data-nav="building-link" renders-this="#building_html" href="#">THE BUILDING</a><br/>
+                    	  	<a href="javascript:void(0)" id="residences" data-nav="" class="no-change">RESIDENCES</a><br/>
 	                    	  	<div class="sub" id="rez_sub" style="display:none;">
-                                    <a renders-this="#rez_html" href="javascript:void(0);" id="living"> › Living </a>
+                                    <a renders-this="#rez_html" href="/home#living" data-nav="living"> › Living </a>
                                     <br/>
-	                    	  		<a renders-this="#kitchens_html" href="javascript:void(0);" id="kitchens"> › Kitchens </a>
+	                    	  		<a renders-this="#kitchens_html" href="/home#kitchens" data-nav="kitchens"> › Kitchens </a>
 	                    	  		<br/>
-	                    	  		<a renders-this="#bathrooms_html" href="javascript:void(0);" id="bathrooms"> › Bathrooms </a>
+	                    	  		<a renders-this="#bathrooms_html" href="/home#bathrooms" data-nav="bathrooms"> › Bathrooms </a>
                                     <br/>
-                                    <a renders-this="#penthouses_html" href="javascript:void(0);" id="tower"> › Tower Residences </a><br/>
+                                    <a renders-this="#penthouses_html" href="/home#tower" data-nav="tower"> › Tower Residences </a><br/>
 	                    	  	</div>
-                    	  	<a href="javascript:void(0)" id="amenities" class="no-change">AMENITIES</a><br/>
+                    	  	<a href="javascript:void(0)" id="amenities" data-nav="" class="no-change">AMENITIES</a><br/>
 	                    	  	<div class="sub" id="amen_sub" style="display:none;">
-                                    <a renders-this="#amenities_html" href="javascript:void(0);" id="lobby"> › Lobby </a>
+                                    <a renders-this="#amenities_html" href="/home#lobbu" data-nav="lobby"> › Lobby </a>
                                     <br/>
-	                    	  		<a renders-this="#better_living_html" href="javascript:void(0);" id="wellness"> › Wellness Center </a>
+	                    	  		<a renders-this="#better_living_html" href="/home#wellness" data-nav="wellness"> › Wellness Center </a>
                                     <br/>
-                                    <a renders-this="#open_air_html" href="javascript:void(0);" id="rooftop"> › Rooftop Lounge </a>
+                                    <a renders-this="#open_air_html" href="/home#rooftop" data-nav="rooftop"> › Rooftop Lounge </a>
 	                    	  	</div>
-                            <a renders-this="#neigh_html" href="javascript:void(0)" id="neighborhood">NEIGHBORHOOD</a><br/>
-                            <a renders-this="#map_html" href="javascript:void(0)" id="map">MAP</a><br/><br/>
-                            <a renders-this="#avail_html" href="javascript:void(0)" id="availability">AVAILABILITY</a><br/>
-                            <a renders-this="#facts_html" href="javascript:void(0)" id="factsheet">FACT SHEET</a><br/>
-                            <a renders-this="#team_html" href="javascript:void(0)" id="team">TEAM</a><br/>
-                            <a renders-this="#press_html" href="javascript:void(0)" id="press">PRESS</a><br/>
+                            <a renders-this="#neigh_html" href="/home#neighborhood" data-nav="neighborhood">NEIGHBORHOOD</a><br/>
+                            <a renders-this="#map_html" href="/home#map" data-nav="map">MAP</a><br/><br/>
+                            <a renders-this="#avail_html" href="/home#availability" data-nav="availability">AVAILABILITY</a><br/>
+                            <a renders-this="#facts_html" href="/home#factsheet" data-nav="factsheet">FACT SHEET</a><br/>
+                            <a renders-this="#team_html" href="/home#team" data-nav="team">TEAM</a><br/>
+                            <a renders-this="#press_html" href="/home#press" data-nav="press">PRESS</a><br/>
                             <br/>
-                    	  	<a renders-this="#contact_html" href="javascript:void(0)">Contact</a><br/>
-                    	  	<a renders-this="#register_html" href="javascript:void(0)">Register</a><br/>
-                    	  	<a renders-this="#legal_html" href="javascript:void(0)">Legal</a><br/>
+                    	  	<a renders-this="#contact_html" href="/home#contact">Contact</a><br/>
+                    	  	<a renders-this="#register_html" href="/home#register)">Register</a><br/>
+                    	  	<a renders-this="#legal_html" href="/home#legal">Legal</a><br/>
                             
                     	  </div>
                     	</div>
@@ -515,7 +515,7 @@
 
            <div class="row">
 
-             <div class="large-4 columns">
+             <div class="large-3 columns">
                <div class="section-container accordion map-accordion" data-section="accordion">
                                        <section>
                                          <p class="title" data-section-title><a class="close-accordion-hack" href="#" style="border-top:0!important;">SHOPPING</a></p>
@@ -592,7 +592,7 @@
              </div>
 
 
-              <div class="large-8 columns">
+              <div class="large-9 columns">
                 <a href="images/Map.jpg" data-reveal-id="myModal">
                   <img class="cent white-border" src="images/Map.jpg" id="map_img" />
                 </a>
@@ -1243,7 +1243,7 @@
             $(document).ready(function() {
 
                 //handle when users hit refresh and URL has a hash
-                setTimeout(function(){$(location.hash).trigger('click');}, 250);
+                setTimeout(function(){$('.sidebar a[data-nav='+location.hash.slice(1)+']').click();}, 1);
 
                 // register form handler
                 $( "#reg_form" ).submit(function(event) {
@@ -1390,9 +1390,9 @@
                     }, 1);
                 });
 
-//                $('.sidebar a').on('click', function(event){
-//                    document.location.hash = event.currentTarget.id;
-//                });
+                $('.sidebar a').on('click', function(event){
+                    document.location.hash = $(event.currentTarget).data("nav");
+                });
 
 
             });
