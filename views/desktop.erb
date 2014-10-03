@@ -53,71 +53,7 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-      <script type="text/javascript"
-              src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization&key=AIzaSyD1s9tLUoAcQTvjwerVQ37HWvAhmMPEJow">
-      </script>
 
-
-      <script>
-          var map;
-          var styles = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#193341"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#29768a"},{"lightness":-37}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#3e606f"},{"weight":2},{"gamma":0.84}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#1a3541"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#2c5a71"}]}];
-
-          var styledMap = new google.maps.StyledMapType(styles,
-                  {name: "Styled Map"});
-
-
-          function initialize() {
-              var mapOptions = {
-                  center: new google.maps.LatLng(40.739587, -74.001481),
-                  zoom: 15,
-                  mapTypeControlOptions: {
-                          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-                  }
-              };
-
-
-
-              map = new google.maps.Map(document.getElementById("map_canvas"),
-                      mapOptions);
-
-
-              var layer = new google.maps.visualization.MapsEngineLayer({
-                  mapId: '08014202610342195205-00161330875310406093',
-                  layerKey:'layer_00001',
-                  map: map,
-                  clickable: true,
-                  suppressInfoWindows: false
-              });
-              var mapsEngineLayer2 = new google.maps.visualization.MapsEngineLayer({
-                  mapId: '08014202610342195205-00161330875310406093',
-                  layerKey: 'layer_00002',
-                  map: map,
-                  clickable: true,
-                  suppressInfoWindows: false
-              });
-
-
-              mapsEngineLayer2.setMap(map);
-
-              map.mapTypes.set('map_style', styledMap);
-              map.setMapTypeId('map_style');
-
-          }
-
-          google.maps.event.addDomListener(window, 'load', initialize);
-          $("#map_html").show(function () {
-              var center = map.getCenter();
-              google.maps.event.trigger(map, "resize");
-              map.setCenter(center);
-          });
-
-          google.maps.event.addDomListener(window, 'resize', function() {
-              var center = map.getCenter();
-              google.maps.event.trigger(map, "resize");
-              map.setCenter(center);
-          });
-
-      </script>
     </head>
     <body>
        
@@ -147,7 +83,7 @@
 	                    	  	</div>
                     	  	<a href="javascript:void(0)" id="amenities" data-nav="" class="no-change">AMENITIES</a><br/>
 	                    	  	<div class="sub" id="amen_sub" style="display:none;">
-                                    <a renders-this="#amenities_html" href="/home#lobbu" data-nav="lobby"> › Lobby </a>
+                                    <a renders-this="#amenities_html" href="/home#lobby" data-nav="lobby"> › Lobby </a>
                                     <br/>
 	                    	  		<a renders-this="#better_living_html" href="/home#wellness" data-nav="wellness"> › Wellness Center </a>
                                     <br/>
@@ -160,9 +96,9 @@
                             <a renders-this="#team_html" href="/home#team" data-nav="team">TEAM</a><br/>
                             <a renders-this="#press_html" href="/home#press" data-nav="press">PRESS</a><br/>
                             <br/>
-                    	  	<a renders-this="#contact_html" href="/home#contact">Contact</a><br/>
-                    	  	<a renders-this="#register_html" href="/home#register)">Register</a><br/>
-                    	  	<a renders-this="#legal_html" href="/home#legal">Legal</a><br/>
+                    	  	<a renders-this="#contact_html" href="/home#contact" data-nav="contact">Contact</a><br/>
+                    	  	<a renders-this="#register_html" href="/home#register" data-nav="register">Register</a><br/>
+                    	  	<a renders-this="#legal_html" href="/home#legal" data-nav="legal">Legal</a><br/>
                             
                     	  </div>
                     	</div>
@@ -188,8 +124,8 @@
         <div id="building_html" style="display:none;">
 
                                 <div style="width:100%; height:475px; border:0px solid white;position:relative;overflow-y:hidden;">
-                                <a href="images/new_hero_full.jpg" data-lightbox="building1">
-                                    <img id="pan" style="overflow:hidden;position:absolute;width:100%;" src="images/new_hero_full.jpg">
+                                <a href="images/245W14_Terrace.jpg" data-lightbox="building1">
+                                    <img id="pan" style="overflow:hidden;position:absolute;width:100%;" src="images/245W14_Terrace.jpg">
                                     </img>
                                 </a>
                                 </div>
@@ -336,12 +272,17 @@
 
         <div id="penthouses_html" style="display:none;">
 
-          <ul data-orbit data-options="timer:false;slide_number:false;bullets:false;navigation_arrows:false;animation:'fade';">
+          <ul data-orbit data-options="timer:false;slide_number:false;bullets:true;navigation_arrows:false;animation:'fade';">
                 <li>
-                    <a href="images/new/Penthouses.jpg" data-lightbox="Penthouses">
-                      <img class="cent" src="images/new/475/Penthouses.jpg" />
+                    <a href="images/245W14_Terrace.jpg" data-lightbox="Penthouses">
+                      <img class="cent" src="images/new/475/terrace.jpg" />
                     </a>
                 </li>
+            <li>
+              <a href="images/new/t1_living.jpg" data-lightbox="Penthouses">
+                <img class="cent" src="images/new/t1_living.jpg" />
+              </a>
+            </li>
                <!--  <li>
                     <a href="images/Penthouses2.jpg" data-lightbox="Penthouses">
                       <img class="centwhite-border" src="images/Penthouses2.jpg" />
@@ -515,7 +456,7 @@
 
            <div class="row">
 
-             <div class="large-3 columns">
+         <!--    <div class="large-3 columns">
                <div class="section-container accordion map-accordion" data-section="accordion">
                                        <section>
                                          <p class="title" data-section-title><a class="close-accordion-hack" href="#" style="border-top:0!important;">SHOPPING</a></p>
@@ -589,18 +530,17 @@
                                          </div>
                                        </section>
                </div>
-             </div>*/
+             </div> -->
 
 
-              <div class="large-9 columns">
+             <!-- <div class="large-9 columns">
                 <a href="images/Map.jpg" data-reveal-id="myModal">
                   <img class="cent white-border" src="images/Map.jpg" id="map_img" />
                 </a>
-              </div>
+              </div>-->
              <div class="small-12 columns" style="padding: 0;">
-               <div class="head">
-                 One Building, Three Neighborhoods <hr>
-               </div>
+               <a href="images/new/475/map_tiow.png" data-reveal-id="myModal">
+                 <img class="cent white-border" src="images/new/475/map_tiow.png" id="map_img" />
              </div>
 
 
@@ -614,34 +554,34 @@
                 <div class="head">
                       Availability <hr/>
                   </div>
-                For availability <a style="color: rgba(0,200,200,1)" target="_blank" href="http://www.corcoran.com/nyc/NewDevelopments/Display/582"> click here. </a>
+              For availability <a style="color: rgba(0,200,200,1)" target="_blank" href="http://www.corcoran.com/nyc/NewDevelopments/Display/582#search-filter-dropdowns"> click here. </a>
                 <script>
-                    if (window.XMLHttpRequest)
-                    {// code for IE7+, Firefox, Chrome, Opera, Safari
-                        xmlhttp=new XMLHttpRequest();
-                    }
-                    else
-                    {// code for IE6, IE5
-                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                    }
-                    xmlhttp.open("GET","http://corcoransunshine.com/newdevxml/582NewDevs.xml",false);
-                    var origin = (xmlhttp.headers.origin || "*");
+                 //   if (window.XMLHttpRequest)
+                 //   {// code for IE7+, Firefox, Chrome, Opera, Safari
+                 //       xmlhttp=new XMLHttpRequest();
+                 //   }
+                 //   else
+                 //   {// code for IE6, IE5
+                 //       xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                 //   }
+                 //   xmlhttp.open("GET","http://corcoransunshine.com/newdevxml/582NewDevs.xml",false);
+                 //   var origin = (xmlhttp.headers.origin || "*");
 
-                    xmlhttp.send();
+                 //   xmlhttp.send();
 
-                    xmlDoc=xmlhttp.responseXML;
+                 //   xmlDoc=xmlhttp.responseXML;
 
-                    document.write("<table border='1'>");
-                    var x=xmlDoc.getElementsByTagName("Listing");
-                    for (i=0;i<x.length;i++)
-                    {
-                        document.write("<tr><td>");
-                        document.write(x[i].getElementsByTagName("Location")[0].childNodes[0].nodeValue);
-                        document.write("</td><td>");
-                        document.write(x[i].getElementsByTagName("Basic Details")[0].childNodes[0].nodeValue);
-                        document.write("</td></tr>");
-                    }
-                    document.write("</table>");
+                 //   document.write("<table border='1'>");
+                 //   var x=xmlDoc.getElementsByTagName("Listing");
+                 //   for (i=0;i<x.length;i++)
+                 //   {
+                 //       document.write("<tr><td>");
+                 //       document.write(x[i].getElementsByTagName("Location")[0].childNodes[0].nodeValue);
+                 //       document.write("</td><td>");
+                 //       document.write(x[i].getElementsByTagName("Basic Details")[0].childNodes[0].nodeValue);
+                 //       document.write("</td></tr>");
+                 //   }
+                 //   document.write("</table>");
                 </script>
  <!--                                      <br/>
                             <div class='row'>
@@ -1000,70 +940,25 @@
                                   </div>
                                   <div class="row">
                                       <div class="large-3 columns">
-                                          <label>WHAT RESIDENCE ARE YOU INTERESTED IN?</label>
-                                          <select name='Residence'>
-                                              <option></option>
-                                              <option>1 Bedroom</option>
-                                              <option>2 Bedrooms</option>
-                                              <option>3 Bedrooms</option>
-                                              <option>4 Bedrooms</option>
-                                          </select>
+                                          <label>Which residence interests you?</label>
+                                        <input name='Residence' type="text">
                                       </div>
                                       <div class="large-3 columns">
-                                          <label >WHAT IS YOUR PRICE RANGE?</label>
-                                          <select name='Price Range'>
-                                              <option></option>
-                                              <option>$1 - $1.5</option>
-                                              <option>$1.5 - $2</option>
-                                              <option>$2 - $2.5</option>
-                                              <option>$2.5 - $3</option>
-                                              <option>$3 - $3.5</option>
-                                              <option>$3.5 - $4</option>
-                                              <option>$4 - $5</option>
-                                              <option>$5 - $6</option>
-                                              <option>$6 - $7</option>
-                                              <option>$7 - $8</option>
-                                              <option>$8 - $9</option>
-                                              <option>$9+</option>
-                                          </select>
+                                          <label >What is your price range?</label>
+                                        <input name='Price Range' type="text">
                                       </div>
                                       <div class="large-3 columns">
-                                          <label>HOW DID YOU HEAR ABOUT US?</label>
-                                          <select name='Heard About Us Through'>
-                                                <option></option>
-                                                <option>Art + Auction</option>
-                                                <option>Broker</option>
-                                                <option>Corcoran Website</option>
-                                                <option>Edible Magazine</option>
-                                                <option>Gallery Guide</option>
-                                                <option>Google</option>
-                                                <option>Live in Neighborhood</option>
-                                                <option>New York Magazine</option>
-                                                <option>New York Post</option>
-                                                <option>New York Times</option>
-                                                <option>Other</option>
-                                                <option>Press</option>
-                                                <option>Referral</option>
-                                                <option>Signage</option>
-                                                <option>Wall Street Journal</option>
-                                            </select>                                        
+                                          <label>How did you hear about us?</label>
+                                        <input name='Heard About Us Through' type="text">
                                       </div>
                                       <div class="large-3 columns">
-                                          <label>WHAT IS THE MOST IMPORTANT FACTOR?</label>
-                                          <select name='Most Important Factor'>
-                                                <option></option>
-                                                <option>Location / Neighborhood</option>
-                                                <option>Fitness / Wellness Amenities</option>
-                                                <option>Interior Design and Finishes</option>
-                                                <option>LEED Certification Level</option>
-                                                <option>Price / Price Per Sq Ft</option>
-                                                <option>Other</option>
-                                          </select>
+                                          <label>What is the most important factor?</label>
+                                          <input name='Most Important Factor' type="text">
                                       </div>
                                   </div>
                                   <div class="row">
                                       <div class="large-6 columns">
-                                          <label>COMMENTS</label>
+                                          <label>Comments</label>
                                           <textarea name='Comments'></textarea>
                                       </div>
                                       <div class="large-6 columns" style="margin-top: 14px;">
@@ -1258,7 +1153,7 @@
                 });
 
                 $("#pan").animate({
-                    top: "-389px"
+                    top: "-100px"
                   }, 10000, 'swing', function() {
                     // $("#pan").animate({
                     //   bottom: "0"
@@ -1412,6 +1307,6 @@
         <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/995321836/?value=0&amp;guid=ON&amp;script=0"/>
         </div>
         </noscript>
-        
+
     </body>
 </html>
