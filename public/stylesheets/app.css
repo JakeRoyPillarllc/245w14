@@ -4896,7 +4896,7 @@ label.error {
   height: auto;
   margin-left: -40%;
   width: 100%;
-  background-color: transparent;
+  background-color: #efeee9;
   padding: 1.25em;
   //border: solid none white;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
