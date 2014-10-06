@@ -5,7 +5,7 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
          <title>Real Estate West Village, Meatpacking District & Chelsea NYC | Condos & Apartments For Sale in NYC | 245 West 14th Street</title>
          <meta name="description" content="Located at 245 West 14th Street between Seventh and Eighth Avenues. Village Green West combines the modern, sustainable living environment with a design aesthetic reminiscent of the 19th century industrial era.">
         <link rel="stylesheet" href="stylesheets/app.css">
@@ -35,6 +35,8 @@
         </script>
     </head>
     <body>
+        <div >
+            <img src="images/new/245W14_Terrace_bg1.jpg" id="bg" alt=""/>
         
         
         <header>
@@ -56,7 +58,7 @@
                     <div class="section-container vertical-tabs" data-section="vertical-tabs" data-options="deep_linking: true">
                         <section>
                             <div style="position:relative;">
-                              <p class="title main-nav" data-section-title><a href="#building">The Building</a></p>
+                              <p class="title main-nav" data-section-title style="center"><a href="#building">The Building</a></p>
                             </div>
                             <div class="content" data-section-content data-slug="building">
                                 <ul data-orbit data-options="timer:false;slide_number:false;bullets:false;">
@@ -98,8 +100,8 @@
                             <p class="title main-nav" data-section-title><a href="#ph">Tower and Penthouse</a></p>
                           </div>
                             <div class="content" data-section-content data-slug="ph">
-                                <ul data-orbit data-options="timer:false;slide_number:false;bullets:false;">
-                                    <li><img class="white-border" src="images/new/sq/terrace.jpg" /></li>
+                                <ul data-orbit data-options="timer:false;slide_number:false;bullets:true;">
+                                    <li><img class="white-border" src="images/new/square/terrace.jpg" /></li>
                                     <li><img class="white-border" src="images/new/square/t1_living_sq.jpg" /></li>
                                     <!-- <li><img class="white-border" src="images/Penthouses3.jpg" /></li> -->
                                 </ul>
@@ -445,6 +447,7 @@
                                 <p><b>New York Times - Michael Namer (Print) 10/17/2012</b></p>
                                 <img class="constrain"  src='images/Full/Press/realdeal2.jpg' />
                                 <p><b>The Real Deal - At the Desk Of Michael Namer 9/1/2013</b></p>
+                                <p class="collapse"><b>x</b> close</p>
                             </div>
                         </section>
                     </div>
@@ -540,13 +543,13 @@
                                       <<input name='Most Important Factor' type="text">
                                     </div>
                                   </div>
-                                  </div>
+
                                   <div class="row">
-                                      <div class="large-6 columns">
+                                      <div class="large-3 columns">
                                           <label>COMMENTS</label>
                                           <textarea></textarea>
                                       </div>
-                                      <div class="large-6 columns">
+                                      <div class="large-3 columns">
                                          <label for="checkbox1"><input name="Represented By A Broker" type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> ARE YOU REPRESENTED BY A BROKER? *</label>
                                       <label for="checkbox2"><input name="Is A Broker" type="checkbox" id="checkbox2" style="display: none;"><span class="custom checked checkbox"></span> ARE YOU A BROKER? *</label>
                                       <br/>
@@ -554,10 +557,10 @@
                                       </div>
                                   </div>
                               </form>
-                              <p class="collapse"><b>x</b> close</p>
+                            <p class="collapse"><b>x</b> close</p>
                           </div>
                         </section>
-                        <section>
+                        <section id='legal'>
                           <p class="title" data-section-title><a href="#">Legal</a></p>
                           <div class="content" data-section-content>
                             <p> 
@@ -667,7 +670,7 @@
               //       }
               //       });  
    
-               $('section.active').find('p.title.main-nav').first().css("background-color","rgba(255,255,255,.5) !important");
+               $('section.active').find('p.title.main-nav').first().css("background-color","rgba(0,0,0,1) !important");
 
                // $("section.active > p.title").on('click', 'p.title.main-nav', function(){
                //    alert('hi');
@@ -706,7 +709,7 @@
                   $('p.title.main-nav').css("background-color","transparent !important");
                    setTimeout(function() {
                      if($(event.currentTarget).closest('section').hasClass('active')){
-                      $(event.currentTarget).css("background-color","rgba(255,255,255,.5) !important");
+                      $(event.currentTarget).css("background-color","rgba(0,0,0,1) !important");
                      }
                     }, 100);
                    
@@ -736,5 +739,6 @@
         <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/995321836/?value=0&amp;guid=ON&amp;script=0"/>
         </div>
         </noscript>
+        </div>
     </body>
 </html>
