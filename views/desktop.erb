@@ -56,10 +56,14 @@
 
     </head>
     <body>
-       
-        <header>
-            
-        </header>
+    <div id="reg_modal" class="reveal-modal medium">
+      Thanks for your message! Someone will be in touch soon.
+      <a class="close-reveal-modal">×</a></div>
+    </div>
+    <div id="reg_error_modal" class="reveal-modal medium">
+      Oops! Looks like we had trouble sending you a confirmation email.<br/> Please check your email address and try again.
+      <a class="close-reveal-modal">×</a></div>
+    </div>
         <hr class="topline">
         <section id='main-content' ">
             <div class="row " style="max-height:100%;background-color:transparent;position:relative;">
@@ -1080,14 +1084,6 @@
             <a class="close-reveal-modal"><img src="images/Close.png" /></a>
           </div>
 
-          <div id="reg_modal" class="reveal-modal medium">
-            Thanks for your message! Someone will be in touch soon.
-            <a class="close-reveal-modal"><img src="images/Close.png" /></a>
-          </div>
-          <div id="reg_error_modal" class="reveal-modal medium">
-            Oops! Looks like we had trouble sending you a confirmation email.<br/> Please check your email address and try again.
-            <a class="close-reveal-modal"><img src="images/Close.png" /></a>
-          </div>
 
 
 
@@ -1150,12 +1146,12 @@
                        event.preventDefault();
                        //ajax request, show modal if form is posted successfully
                        $.post( "/mail_to", $("#reg_form").serialize(), function(data) {
-//                            $('#reg_modal').foundation('reveal', 'open');
-                           alert('Thanks! Someone will be in touch soon.');
-                           $('#reg_form').fadeOut(250);
+                            $('#reg_modal').foundation('reveal', 'open');
+//                           alert('Thanks! Someone will be in touch soon.');
+//                           $('#reg_form').fadeOut(250);
                        }).fail(function() {
-//                            $('#reg_error_modal').foundation('reveal', 'open');
-                           alert('Sorry, something went wrong. Is your email right? Please try again.');
+                            $('#reg_error_modal').foundation('reveal', 'open');
+//                           alert('Sorry, something went wrong. Is your email right? Please try again.');
                        });
                 });
 
