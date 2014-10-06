@@ -46,6 +46,7 @@ p {
     color:rgba(111,111,111,1);
     text-align: justify;
     padding: 0px 10px;
+    margin-top: 5px;
 
 }
 
@@ -110,15 +111,16 @@ hr{
 .touch .orbit-bullets { display: block !important; }
 
 .orbit-container{
-	top: -76px;
-  padding-top: 76px !important;
+	//top: -76px;
+  //padding-top: 76px !important;
   //margin-bottom: 20px;
 
 }
 .orbit-bullets{
 	//display: inline;
-	position:absolute;
-	top:30px !important;
+	position:relative;
+	top:10px !important;
+    margin-top: 5px;
 	right:0;
 	z-index: 40;
 }
@@ -163,9 +165,10 @@ hr{
 //border: solid 1px #cccccc;
 }
 .section-container.tabs > section > .title, .section-container.tabs > .section > .title {
-    background-color: #ffffff;
+    background-color: rgba(0,0,0,.2);
     cursor: pointer;
-    border: solid 1px #cccccc;
+    margin-top: 0px;
+    //border: solid 1px #cccccc;
 }
 .section-container.auto > section.active > .title, .section-container.auto > .section.active > .title,
 .section-container.vertical-tabs > section.active > .title,
@@ -177,6 +180,7 @@ hr{
 .section-container.accordion > section.active > .title,
 .section-container.accordion > .section.active > .title {
     background: rgba(255,255,255,.2);
+
 //border: solid 1px #cccccc;
 }
 
@@ -192,7 +196,15 @@ hr{
 .section-container.accordion > .section.active > .title a {
     color: rgba(255,255,255,.3);
 }
-
+.section-container.tabs > section.active > .title a, .section-container.tabs > .section.active > .title a {
+    color: #333333;
+}
+.section-container.tabs > section > .title a, .section-container.tabs > .section > .title a {
+    padding: 0.625em;
+    color: rgba(255,255,255,1);
+    font-size: 0.875em;
+    background: none;
+}
 /*.orbit-bullets{
 	top: -515px;
     right: -295px;
