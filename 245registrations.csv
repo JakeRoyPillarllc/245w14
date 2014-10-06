@@ -3,6 +3,7 @@ w,w,will@williamgerwin.com,j,j,j,j,j,j,j,j,j,j,yes,yes
 w,w,will@williamgerwin.com,j,j,j,j,j,j,j,j,j,j,yes,yes
 w,w,will@williamgerwin.com,j,j,j,j,j,j,j,j,j,j,yes,yes
 w,w,will@williamgerwin.com,j,j,j,j,j,j,j,j,j,j,yes,yes
+<<<<<<< HEAD
 w,i,will@williamgerwin.com,k,k,k,k,k,k,k,k,k,k,yes,yes
 a,a,a@e.com,"","","","","","","","","","",no,yes
 a,a,a@e.com,"","","","","","","","","","",yes,yes
@@ -12,3 +13,23 @@ w,w,w@w.com,"","","","","","","","","","",yes,yes
 w,w,w@w.com,"","","","","","","","","","",yes,yes
 w,w,w@w.com,"","","","","","","","","","",yes,yes
 w,w,w@w.com,"","","","","","","","","","",yes,yes
+=======
+a,a,a@a.com,"","","","","","","","","","",no,yes
+a,a,a@a.com,"","","","","","","","","","",yes,yes
+a,a,a@a.com,"","","","","","","","","","",yes,yes
+a,a,a@a.com,"","","","","","","","","","",yes,yes
+a,a,a@a.com,"","","","","","","","","","",yes,yes
+a,s,s@a.com,"","","","","","","","","","",yes,yes
+a,s,s@a.com,"","","","","","","","","","",no,yes
+a,a,a@a/.,"","","","","","","","","","",no,no
+a,a,a@a.com,"","","","","","","","","","",no,no
+a,a,a@a.com,"","","","","","","","","","",no,no
+a,a,a@a.com,"","","","","","","","","","",no,no
+a,a,a@a.com,"","","","","","","","","","",yes,yes
+a,a,a@a.com,"","","","","","","","","","",no,no
+a,a,a@a.com,"","","","","","","","","","",no,no
+a,a,a@a.com,"","","","","","","","","","",no,no
+a,a,a@a.com,"","","","","","","","","","",no,no
+a,a,a@a.dom,"","","","","","","","","","",no,no
+a,a,asdf@asdf.com,"","","","","","","","","","",no,no
+>>>>>>> FETCH_HEAD
