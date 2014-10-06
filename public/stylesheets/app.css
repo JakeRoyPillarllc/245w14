@@ -4878,7 +4878,7 @@ label.error {
   height: 100%;
   width: 100%;
   background: black;
-  background: #efeee9;
+  background: rgba(111,111,111,.5);
   opacity:0.9;
   z-index: 98;
   display: none;
@@ -4896,7 +4896,7 @@ label.error {
   height: auto;
   margin-left: -40%;
   width: 100%;
-  background-color: #efeee9;
+  background-color: rgba(255,255,255,1);
   padding: 1.25em;
   //border: solid none white;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
