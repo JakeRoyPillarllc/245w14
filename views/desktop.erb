@@ -1134,7 +1134,7 @@
         <script>
             $(document).foundation();
             $(document).foundation('reveal', {animation: 'fade', animationSpeed: 600});
-            
+
 
             $(document).ready(function() {
 
@@ -1183,7 +1183,7 @@
 
                //resize orbit-container to fit slideshow contents
                 if ($('.orbit-container ul').height() === 0) {
-                        console.log("height is zero")
+
                         $(window).trigger('resize');
                         $('.orbit-container ul').height(300);
                 }
@@ -1282,7 +1282,7 @@
                 $('.sidebar a, .logo').on('click', function() {
                     setTimeout(function() {
                         if ($('.orbit-container ul').height() === 0) {
-                            console.log("height is zero")
+
                             $(window).trigger('resize');
                             //$('.orbit-container ul').height(360);
                         }
