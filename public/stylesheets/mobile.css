@@ -12,6 +12,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow:auto;
+    -webkit-overflow-scrolling:touch;
 
     /*color: rgba(111,111,111,1);*/
     color: rgba(255,255,255,1);
