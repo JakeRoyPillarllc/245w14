@@ -1,6 +1,7 @@
 #myapp.rb
 require 'sinatra/base'
 require 'nokogiri'
+require 'open-uri'
 require 'pony'
 require 'csv'
 
@@ -22,9 +23,10 @@ class Public < Sinatra::Base
   }
 
   get '/' do
-  	# @doc = Nokogiri::XML(File.read("books.xml"))
-   #  @books = @doc.xpath("//book")
-   #  raise @books.inspect
+    #@url = 'http://corcoransunshine.com/newdevxml/582NewDevs.xml'
+    #@doc = Nokogiri::XML(open(url))
+    #@books = @doc.xpath('//book')
+    #raise @books.inspect
     erb :index
   end
 
