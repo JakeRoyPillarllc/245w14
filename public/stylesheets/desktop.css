@@ -1,13 +1,19 @@
 html{
+<<<<<<< HEAD
     height:101%;
     #-background: #ffffff;
     overflow-y: scroll;
+=======
+    height:100%;
+    #-background: #ffffff;
+    overflow-y: auto;
+>>>>>>> refresh_master
 }
 
 body{
     font-family: Arial !important;
     height:100%;
-    min-width: 900px;
+    width: 100%;
     //overflow: auto;
     //position: fixed;
     /*font-family: Arial !important;
@@ -19,7 +25,11 @@ body p, ul, table{
 
 }
 .everything {
+<<<<<<< HEAD
 margin-bottom: 40px;
+=======
+margin-bottom: 0px;
+>>>>>>> refresh_master
 }
 
 .content-area{
@@ -41,6 +51,11 @@ margin-bottom: 40px;
 
 #main-content{
     height:100%;
+    padding-bottom: 3em;
+}
+
+body > #main-content {
+    height: auto; min-height: 100%;
 }
 
 .sidebar{
@@ -48,13 +63,20 @@ margin-bottom: 40px;
     //font-family: ITC Century W01 Book !important; 
     font-family: 'EngraversGothicBTW01-Re';
     font-weight: bold;
+    letter-spacing: .05em;
+    text-transform: uppercase;
 
 
 }
 
 #map_img {
+<<<<<<< HEAD
     max-height: 475px;
     width: auto;
+=======
+    max-height: auto;
+    width: 100%;
+>>>>>>> refresh_master
 }
 
 .map-list{
@@ -62,9 +84,17 @@ margin-bottom: 40px;
 }
 
 .nav-font{
+<<<<<<< HEAD
     font-family: Arial;
     //font-weight: bold;
     font-size: 12px;
+=======
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    //font-weight: bold;
+    font-size: 14px;
+    letter-spacing: .025em;
+    padding: 0 5px;
+>>>>>>> refresh_master
 }
 
 table tr td a {
@@ -89,6 +119,7 @@ table tr td a {
 
 .sidebar a.chosen{
     color:black;
+    text-decoration: underline;
 }
 
 .sidebar a:hover{
@@ -101,6 +132,7 @@ table tr td a {
 }
 
 #copyright{
+<<<<<<< HEAD
     font-size:10pt;
     position:relative;
     margin-left:30px;
@@ -110,7 +142,19 @@ table tr td a {
 
 
     z-index:30;
+=======
+
+    width:100%;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+
+>>>>>>> refresh_master
 }
+
+
 
 
 h4{
@@ -198,10 +242,15 @@ hr.topline {
     border: solid rgba(111,111,111,1);
     border-width: 1px 0 0;
     clear: both;
+<<<<<<< HEAD
     margin: 15px 30px;
+=======
+    margin: 30px 30px 10px 30px;
+>>>>>>> refresh_master
     display: block;
     height: 0;
 }
+
 .orbit-bullets{
 float:right;
     //right:75px;
@@ -219,12 +268,17 @@ float:right;
 
 .orbit-container .orbit-prev {
      background-color: transparent !important;
+<<<<<<< HEAD
      background-image: url('../images/prev.png') !important;
+=======
+     background-image: url('../images/prev_h.png') !important;
+>>>>>>> refresh_master
      background-repeat: no-repeat !important;
      width: 10px !important;
      height: 18px !important;
      position:relative;
      float: left;
+<<<<<<< HEAD
      margin: 5px 10px 0px 5px;
  }
 .orbit-container .orbit-prev:hover {
@@ -236,6 +290,15 @@ float:right;
     position:relative;
     float: left;
     margin: 5px 10px 0px 5px;
+=======
+     margin: 10px 10px 0px 5px;
+ }
+.orbit-container .orbit-prev:hover {
+
+    background-image: url('../images/prev.png') !important;
+
+
+>>>>>>> refresh_master
 }
 
 .orbit-container .orbit-prev > span {
@@ -244,6 +307,7 @@ float:right;
 
 .orbit-container .orbit-next {
     background-color: transparent !important;
+<<<<<<< HEAD
     background-image: url('../images/next.png') !important;
     background-repeat: no-repeat !important;
     width: 10px !important;
@@ -255,13 +319,25 @@ float:right;
 }
 .orbit-container .orbit-next:hover {
     background-color: transparent !important;
+=======
+>>>>>>> refresh_master
     background-image: url('../images/next_h.png') !important;
     background-repeat: no-repeat !important;
     width: 10px !important;
     height: 18px !important;
     position:relative;
     float: left;
+<<<<<<< HEAD
     margin: 5px 5px 0px 10px;
+=======
+    margin: 10px 5px 0px 10px;
+
+}
+.orbit-container .orbit-next:hover {
+    background-color: transparent !important;
+    background-image: url('../images/next.png') !important;
+
+>>>>>>> refresh_master
 
 }
 .orbit-container .orbit-next > span {
@@ -352,6 +428,11 @@ float:right;
 	font-size: 14pt;
     text-align: center;
     text-transform: uppercase;
+<<<<<<< HEAD
+=======
+    letter-spacing: .13em;
+
+>>>>>>> refresh_master
 }
 .head-gal{
 //padding-top:5px !important;
@@ -361,6 +442,10 @@ float:right;
     font-size: 14pt;
     text-align: center;
     text-transform: uppercase;
+<<<<<<< HEAD
+=======
+    letter-spacing: .13em;
+>>>>>>> refresh_master
 }
 
 .white-border{
@@ -392,7 +477,11 @@ section p:not(.title) {
 }
 
 .orbit-slides-container{
+<<<<<<< HEAD
     min-height:100%;
+=======
+    height:100%;
+>>>>>>> refresh_master
 }
 
 @font-face {

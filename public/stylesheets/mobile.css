@@ -7,11 +7,21 @@
 }
 body {
     margin: 0;
+<<<<<<< HEAD
     background-image: url('../images/new/new_hero_full_480.jpg');
+=======
+    background-image: url('../images/new/245W14_Terrace_bg1.jpg');
+>>>>>>> refresh_master
     /*background: transparent;*/
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+<<<<<<< HEAD
+=======
+    overflow:auto;
+    -webkit-overflow-scrolling:touch;
+
+>>>>>>> refresh_master
     /*color: rgba(111,111,111,1);*/
     color: rgba(255,255,255,1);
     padding: 0;
@@ -22,10 +32,26 @@ body {
     position: relative;
     cursor: default;
 }
+<<<<<<< HEAD
 
 #main-content .title a {
     font-weight: bold;
     font-size: 2em;
+=======
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#main-content .title a {
+    font-weight: bold;
+    font-size: 1.8em;
+>>>>>>> refresh_master
 }
 
 .section-container.auto > section > .content, .section-container.auto > .section > .content,
@@ -45,12 +71,20 @@ p {
     color:rgba(111,111,111,1);
     text-align: justify;
     padding: 0px 10px;
+<<<<<<< HEAD
+=======
+    margin-top: 5px;
+>>>>>>> refresh_master
 
 }
 
 p.title.main-nav{
   font-family: 'EngraversGothicBTW01-Re';
+<<<<<<< HEAD
 	/*background-color: transparent !important;*/
+=======
+	background-color: transparent !important;
+>>>>>>> refresh_master
 	border-left: none !important;
 	border-right: none !important;
 	border-bottom: none !important;
@@ -77,10 +111,10 @@ display: inline-block;
 white-space: nowrap;
 }
 
-/*section.active p.title.main-nav{
-  background-color:#efeee9;
+section.active p.title.main-nav{
+  background-color:rgba(255,255,255,.5);
 }
-*/
+
 
 .white-border{
     width: 100%;
@@ -109,15 +143,16 @@ hr{
 .touch .orbit-bullets { display: block !important; }
 
 .orbit-container{
-	top: -76px;
-  padding-top: 76px !important;
+	//top: -76px;
+  //padding-top: 76px !important;
   //margin-bottom: 20px;
 
 }
 .orbit-bullets{
 	//display: inline;
-	position:absolute;
-	top:30px !important;
+	position:relative;
+	top:10px !important;
+    margin-top: 5px;
 	right:0;
 	z-index: 40;
 }
@@ -134,10 +169,79 @@ hr{
 }
 .orbit-slides-container &li.active {
     max-height: 100%;
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> refresh_master
 
+}
+.section-container.auto > section > .title:hover, .section-container.auto > .section > .title:hover,
+.section-container.vertical-tabs > section > .title:hover,
+.section-container.vertical-tabs > .section > .title:hover,
+.section-container.vertical-nav > section > .title:hover,
+.section-container.vertical-nav > .section > .title:hover,
+.section-container.horizontal-nav > section > .title:hover,
+.section-container.horizontal-nav > .section > .title:hover,
+.section-container.accordion > section > .title:hover,
+.section-container.accordion > .section > .title:hover {
+    background-color: #ffffff;
+}
+/* line 220, ../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.3.1/scss/foundation/components/_section.scss */
+.section-container.auto > section > .content, .section-container.auto > .section > .content,
+.section-container.vertical-tabs > section > .content,
+.section-container.vertical-tabs > .section > .content,
+.section-container.vertical-nav > section > .content,
+.section-container.vertical-nav > .section > .content,
+.section-container.horizontal-nav > section > .content,
+.section-container.horizontal-nav > .section > .content,
+.section-container.accordion > section > .content,
+.section-container.accordion > .section > .content {
+    padding: 0.9375em;
+    background-color: rgba(255,255,255,.8);
+//border: solid 1px #cccccc;
+}
+.section-container.tabs > section > .title, .section-container.tabs > .section > .title {
+    background-color: rgba(0,0,0,.2);
+    cursor: pointer;
+    margin-top: 0px;
+    //border: solid 1px #cccccc;
+}
+.section-container.auto > section.active > .title, .section-container.auto > .section.active > .title,
+.section-container.vertical-tabs > section.active > .title,
+.section-container.vertical-tabs > .section.active > .title,
+.section-container.vertical-nav > section.active > .title,
+.section-container.vertical-nav > .section.active > .title,
+.section-container.horizontal-nav > section.active > .title,
+.section-container.horizontal-nav > .section.active > .title,
+.section-container.accordion > section.active > .title,
+.section-container.accordion > .section.active > .title {
+    background: rgba(255,255,255,.2);
 
+//border: solid 1px #cccccc;
+}
+
+/* line 233, ../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.3.1/scss/foundation/components/_section.scss */
+.section-container.auto > section.active > .title a, .section-container.auto > .section.active > .title a,
+.section-container.vertical-tabs > section.active > .title a,
+.section-container.vertical-tabs > .section.active > .title a,
+.section-container.vertical-nav > section.active > .title a,
+.section-container.vertical-nav > .section.active > .title a,
+.section-container.horizontal-nav > section.active > .title a,
+.section-container.horizontal-nav > .section.active > .title a,
+.section-container.accordion > section.active > .title a,
+.section-container.accordion > .section.active > .title a {
+    color: rgba(255,255,255,.3);
+}
+.section-container.tabs > section.active > .title a, .section-container.tabs > .section.active > .title a {
+    color: #333333;
+}
+.section-container.tabs > section > .title a, .section-container.tabs > .section > .title a {
+    padding: 0.625em;
+    color: rgba(255,255,255,1);
+    font-size: 0.875em;
+    background: none;
+}
 /*.orbit-bullets{
 	top: -515px;
     right: -295px;

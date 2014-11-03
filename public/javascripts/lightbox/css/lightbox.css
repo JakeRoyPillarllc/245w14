@@ -7,10 +7,10 @@ body:after {
 /* line 11, ../sass/lightbox.sass */
 .lightboxOverlay {
   position: absolute;
-  top: 0;
+  top: -30px;
   left: 0;
   z-index: 9999;
-  background-color: #efeee9;
+  background-color: rgba(111,111,111,1);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.9;
   display: none;
@@ -20,7 +20,11 @@ body:after {
 .lightbox {
   position: absolute;
   left: 0;
+<<<<<<< HEAD
   top:20px;
+=======
+  top:0px;
+>>>>>>> refresh_master
   width: 100%;
   z-index: 10000;
   text-align: center;
