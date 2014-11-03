@@ -5,7 +5,7 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width">
          <title>Real Estate West Village, Meatpacking District & Chelsea NYC | Condos & Apartments For Sale in NYC | 245 West 14th Street</title>
          <meta name="description" content="Located at 245 West 14th Street between Seventh and Eighth Avenues. Village Green West combines the modern, sustainable living environment with a design aesthetic reminiscent of the 19th century industrial era.">
         <link rel="stylesheet" href="stylesheets/app.css">
@@ -35,8 +35,6 @@
         </script>
     </head>
     <body>
-        <div >
-            <img src="images/new/245W14_Terrace_bg1.jpg" id="bg" alt=""/>
         
         
         <header>
@@ -58,15 +56,11 @@
                     <div class="section-container vertical-tabs" data-section="vertical-tabs" data-options="deep_linking: true">
                         <section>
                             <div style="position:relative;">
-                              <p class="title main-nav" data-section-title style="center"><a href="#building">The Building</a></p>
+                              <p class="title main-nav" data-section-title><a href="#building">The Building</a></p>
                             </div>
                             <div class="content" data-section-content data-slug="building">
                                 <ul data-orbit data-options="timer:false;slide_number:false;bullets:false;">
-<<<<<<< HEAD
                                     <li><img class="white-border" src="images/new/new_hero_full_640.jpg" /></li>
-=======
-                                    <li><img class="white-border" src="images/new/square/terrace.jpg" /></li>
->>>>>>> refresh_master
                                     <!-- <li><img class="white-border" src="images/Building2.jpg" /></li>
                                     <li><img class="white-border" src="images/Building3.jpg" /></li> -->
                                 </ul>
@@ -95,7 +89,9 @@
                                     <li><img class="white-border" src="images/new/245Bathroom-02.jpg" /></li>
                                     <li><img class="white-border" src="images/new/245Bathroom-03.jpg" /></li>
                                 </ul>
-                                <p>Behind the elegant materials and residential finishes is a state of the art central heating and cooling system by Daikin and advanced air handling that provide precise temperature control and tempered filtered fresh air year-round. For more info see <a id="fact_link" href="/mobile#fact">fact sheet.</a></p>
+                                <p>
+                                    Behind the elegant materials and residential finishes is a state of the art central heating and cooling system by Daikin and advanced air handling that provide precise temperature control and tempered filtered fresh air year-round. For more info see <a id="fact_link" href="/mobile#fact">fact sheet.</a>
+                                </p>
                                 <p class="collapse"><b>x</b> close</p>
                             </div>
                         </section>
@@ -104,17 +100,10 @@
                             <p class="title main-nav" data-section-title><a href="#ph">Tower and Penthouse</a></p>
                           </div>
                             <div class="content" data-section-content data-slug="ph">
-<<<<<<< HEAD
                                 <ul data-orbit data-options="timer:false;slide_number:false;bullets:false;">
                                     <li><img class="white-border" src="images/new/Penthouses.jpg" /></li>
                                     <!-- <li><img class="white-border" src="images/Penthouses2.jpg" /></li>
                                     <li><img class="white-border" src="images/Penthouses3.jpg" /></li> -->
-=======
-                                <ul data-orbit data-options="timer:false;slide_number:false;bullets:true;">
-                                    <li><img class="white-border" src="images/new/square/terrace.jpg" /></li>
-                                    <li><img class="white-border" src="images/new/square/t1_living_sq.jpg" /></li>
-                                    <!-- <li><img class="white-border" src="images/Penthouses3.jpg" /></li> -->
->>>>>>> refresh_master
                                 </ul>
                                 <p>
                                     This perfect location provides an unusual abundance of light and openness for the full-floor Tower residences and Penthouse. These special apartments celebrate the downtown “loft” experience with expansive kitchens that open elegantly into the airy living spaces.
@@ -196,7 +185,8 @@
                             </div>
                             <div class="content" data-section-content data-slug="avail">
 
-                              For availability <a style="color: rgba(0,200,200,1)" target="_blank" href="http://www.corcoran.com/nyc/NewDevelopments/Display/582#search-filter-dropdowns"> click here. </a>
+                                For availability <a target="_blank" href="http://www.corcoran.com/nyc/NewDevelopments/Display/582">click here</a>.
+                                <br/>
                                 <br/>
                                 <!-- <ul data-orbit data-options="timer:false;slide_number:false;bullets:true;">
                                     <li>
@@ -458,7 +448,6 @@
                                 <p><b>New York Times - Michael Namer (Print) 10/17/2012</b></p>
                                 <img class="constrain"  src='images/Full/Press/realdeal2.jpg' />
                                 <p><b>The Real Deal - At the Desk Of Michael Namer 9/1/2013</b></p>
-                                <p class="collapse"><b>x</b> close</p>
                             </div>
                         </section>
                     </div>
@@ -537,30 +526,74 @@
                                       </div>
                                   </div>
                                   <div class="row">
-                                    <div class="large-3 columns">
-                                      <label>WHAT RESIDENCE ARE YOU INTERESTED IN?</label>
-                                      <input name='Residence' type="text">
-                                    </div>
-                                    <div class="large-3 columns">
-                                      <label >WHAT IS YOUR PRICE RANGE?</label>
-                                      <input name='Price Range' type="text">
-                                    </div>
-                                    <div class="large-3 columns">
-                                      <label>HOW DID YOU HEAR ABOUT US?</label>
-                                      <input name='Heard About Us Through' type="text">
-                                    </div>
-                                    <div class="large-3 columns">
-                                      <label>WHAT IS THE MOST IMPORTANT FACTOR?</label>
-                                      <<input name='Most Important Factor' type="text">
-                                    </div>
-                                  </div>
-
-                                  <div class="row">
                                       <div class="large-3 columns">
+                                          <label>WHAT RESIDENCE ARE YOU INTERESED IN?</label>
+                                          <select name='Residence'>
+                                              <option></option>
+                                              <option>1 Bedroom</option>
+                                              <option>2 Bedrooms</option>
+                                              <option>3 Bedrooms</option>
+                                              <option>4 Bedrooms</option>
+                                          </select>
+                                      </div>
+                                      <div class="large-3 columns">
+                                          <label>WHAT IS YOUR PRICE RANGE?</label>
+                                          <select name='Price Range'>
+                                              <option></option>
+                                              <option>$1 - $1.5</option>
+                                              <option>$1.5 - $2</option>
+                                              <option>$2 - $2.5</option>
+                                              <option>$2.5 - $3</option>
+                                              <option>$3 - $3.5</option>
+                                              <option>$3.5 - $4</option>
+                                              <option>$4 - $5</option>
+                                              <option>$5 - $6</option>
+                                              <option>$6 - $7</option>
+                                              <option>$7 - $8</option>
+                                              <option>$8 - $9</option>
+                                              <option>$9+</option>
+                                          </select>
+                                      </div>
+                                      <div class="large-3 columns">
+                                          <label>HOW DID YOU HEAR ABOUT US?</label>
+                                          <select name='Heard About Us Through'>
+                                              <option></option>
+                                                <option>Art + Auction</option>
+                                                <option>Broker</option>
+                                                <option>Corcoran Website</option>
+                                                <option>Edible Magazine</option>
+                                                <option>Gallery Guide</option>
+                                                <option>Google</option>
+                                                <option>Live in Neighborhood</option>
+                                                <option>New York Magazine</option>
+                                                <option>New York Post</option>
+                                                <option>New York Times</option>
+                                                <option>Other</option>
+                                                <option>Press</option>
+                                                <option>Referral</option>
+                                                <option>Signage</option>
+                                                <option>Wall Street Journal</option>
+                                          </select>
+                                      </div>
+                                      <div class="large-3 columns">
+                                          <label>WHAT IS THE MOST IMPORTANT FACTOR?</label>
+                                          <select name='Most Important Factor'>
+                                              <option></option>
+                                                <option>Location / Neighborhood</option>
+                                                <option>Fitness / Wellness Amenities</option>
+                                                <option>Interior Design and Finishes</option>
+                                                <option>LEED Certification Level</option>
+                                                <option>Price / Price Per Sq Ft</option>
+                                                <option>Other</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="large-6 columns">
                                           <label>COMMENTS</label>
                                           <textarea></textarea>
                                       </div>
-                                      <div class="large-3 columns">
+                                      <div class="large-6 columns">
                                          <label for="checkbox1"><input name="Represented By A Broker" type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> ARE YOU REPRESENTED BY A BROKER? *</label>
                                       <label for="checkbox2"><input name="Is A Broker" type="checkbox" id="checkbox2" style="display: none;"><span class="custom checked checkbox"></span> ARE YOU A BROKER? *</label>
                                       <br/>
@@ -568,10 +601,10 @@
                                       </div>
                                   </div>
                               </form>
-                            <p class="collapse"><b>x</b> close</p>
+                              <p class="collapse"><b>x</b> close</p>
                           </div>
                         </section>
-                        <section id='legal'>
+                        <section>
                           <p class="title" data-section-title><a href="#">Legal</a></p>
                           <div class="content" data-section-content>
                             <p> 
@@ -583,10 +616,7 @@
                             <p>
                                 All dimensions are approximate and subject to normal construction variances and tolerances. We reserve the right to make changes due to unforeseen conditions and in accordance with the offering plan. For exact measurements you must hire our own architect or engineer.
                             </p>
-                            <p>
-                              Fair Housing Opportunity <br/>
-                              We are pledged to the letter and spirit of U.S. policy for the achievement of equal housing opportunity and non-discrimination throughout the nation. We encourage and support an affirmative advertising and marketing program in which there are no barriers to obtaining housing because of a person’s actual or perceived gender (including gender identity), race, color, religion, handicap/ disability, familial status, national origin, age, lawful occupation, presence of children, sexual orientation, marital status, partnership status, citizenship status, lawful source of income or any other factor illegal under federal, state or city law.
-                            </p>
+                            <img src='images/small-logo.gif' />
                             <p class="collapse"><b>x</b> close</p>
                           </div>
                         </section>
@@ -681,7 +711,7 @@
               //       }
               //       });  
    
-               $('section.active').find('p.title.main-nav').first().css("background-color","rgba(0,0,0,1) !important");
+               $('section.active').find('p.title.main-nav').first().css("background-color","#efeee9 !important");
 
                // $("section.active > p.title").on('click', 'p.title.main-nav', function(){
                //    alert('hi');
@@ -720,9 +750,9 @@
                   $('p.title.main-nav').css("background-color","transparent !important");
                    setTimeout(function() {
                      if($(event.currentTarget).closest('section').hasClass('active')){
-                      $(event.currentTarget).css("background-color","rgba(0,0,0,1) !important");
+                      $(event.currentTarget).css("background-color","#efeee9 !important");
                      }
-                    }, 100);
+                    }, 400);
                    
                     setTimeout(function() {
                         //$("section.active > .content > .orbit-container > .orbit-bullets").insertAfter($("section.active > p.title.main-nav"));
@@ -750,6 +780,5 @@
         <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/995321836/?value=0&amp;guid=ON&amp;script=0"/>
         </div>
         </noscript>
-        </div>
     </body>
 </html>
