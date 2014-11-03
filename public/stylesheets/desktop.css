@@ -116,8 +116,8 @@ table tr td a {
     clear: both;
     position: relative;
     z-index: 10;
-    height: 3em;
-    margin-top: -3em;
+    height: 1em;
+    margin-top: -2em;
 
 }
 
